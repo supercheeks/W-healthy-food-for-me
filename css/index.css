@@ -1,0 +1,15 @@
+* { box-sizing: border-box; font-family: "SquareR"; font-size: 0.97em; margin: 0; padding: 0; font-weight: normal;}
+.w100 {width:1080px; height:auto; margin: 0 auto;}
+#wrap {width: 100%; height: auto;}
+
+header {width: 100%; height: 500px; background: linear-gradient(to bottom, #ff8a6e, #ff6767);}
+    nav {width: 100%; height: 80px;}
+nav .w100 > * { margin-right: -4px; display: inline-block;}
+nav .w100 { border-bottom: 1px solid rgba(255, 255, 255, 0.3);}
+#logo, .mainMenu { vertical-align: middle;}
+        #logo {width: 10%; height: auto; color: white; }
+        .mainMenu {width: 70%; height: auto; line-height: 80px; color: white; }
+
+#visual {width: auto; height: 250px;}
+
+#category {width: auto; height: 100px;}
