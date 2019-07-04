@@ -1,0 +1,34 @@
+/*######################################################
+                    WebFonts 사용법
+########################################################
+
+.html에 <link rel="stylesheet" href="[webfont.css 상대경로]">
+>> 상대경로 주의 <<
+
+CSS 연결 후 자유롭게
+선택자 { font-family: "SquareEB"; }
+선택자 { font-family: "SquareB"; }
+선택자 { font-family: "SquareR"; }
+선택자 { font-family: "SquareL"; }
+
+적용*/
+
+@font-face {
+    font-family: "SquareEB";
+    src: url("../font/NanumSquareRoundEB.woff");
+}
+
+@font-face {
+    font-family: "SquareB";
+    src: url("../font/NanumSquareRoundB.woff");
+}
+
+@font-face { 
+    font-family: "SquareR"; 
+    src: url("../font/NanumSquareRoundR.woff");
+}
+
+@font-face { 
+    font-family: "SquareL"; 
+    src: url("../font/NanumSquareRoundL.woff");
+}
