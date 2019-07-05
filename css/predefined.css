@@ -1,0 +1,14 @@
+/* width */
+.w100 { width: 1080px; margin: 0 auto;}
+
+/* color */
+.red { color: #eb6363;}
+.brown { color: #432a2c;}
+.white { color: white;}
+.gradient { background: linear-gradient(to bottom, #ff8a6b, #eb6363);}
+
+/* font */
+.font_EB { font-family: "SquareEB";}
+.font_B { font-family: "SquareB";}
+.font_R { font-family: "SquareR";}
+.font_L { font-family: "SquareL";}

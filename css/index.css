@@ -1,21 +1,41 @@
-* { box-sizing: border-box; font-family: "SquareR"; font-size: 0.97em; margin: 0; padding: 0; font-weight: normal; text-decoration: none; color: #222;}
-.w100 {width:1080px; height:auto; margin: 0 auto;}
-#wrap {width: 100%; height: 100%; min-height: 100%;}
+* { width: 100%; height: auto; box-sizing: border-box; font-family: "SquareR"; font-size: 0.97em; margin: 0; padding: 0; font-weight: normal; text-decoration: none; color: #222; list-style: none; z-index: 1;}
+html, body { min-height: 100%;}
 
-header {width: 100%; height: 500px; background: linear-gradient(to bottom, #ff8a6e, #ff6767);}
-    nav {width: 100%; height: 80px;}
-nav .w100 > * { margin-right: -4px; display: inline-block;}
-nav .w100 { border-bottom: 1px solid rgba(255, 255, 255, 0.3);}
-#logo, .mainMenu { vertical-align: middle;}
-        #logo {width: 8%; height: auto; color: white; }
-        .mainMenu {width: 72%; height: auto; line-height: 80px; color: white; }
-.mainMenu > ul {width: 100%; height: auto; }
-.mainMenu > ul > li {width:auto; height:auto; display: inline-block; margin-right: calc(30px - 4px); }
-.subNav > span i {font-size: 1.1em; color: white;}
-.subNav > a {}
-#visual {width: auto; height: 250px;}
+#wrap { height: 100%; min-height: 100%;}
 
-#category {width: 100%; height: auto; padding: 15px 0; border-bottom: 1px solid rgba(255, 255, 255); background: #f5f5f5;}
-#category > .w100 > ul > li {width: calc(100% / 5); height: auto; display: inline-block; margin-right: -4px; vertical-align: middle; text-align: center; border-right: 1px solid #ccc; padding: 10px 0;}
-#category .w100 > ul > li:last-child { border: none;}
-#category .w100 > ul > li > span:first-child { background: #555; color: white; width: 40px; height: 40px; line-height: 40px; border-radius: 40px; margin-right: 5px; display: inline-block;}
+header { height: 600px;}
+    header > nav { width: 100%; height: 80px; position: fixed; top: 0; left: 0; z-index: 100;}
+        header > nav .w100 { border-bottom: 1px solid rgba(255, 255, 255, 0.5);}
+            header > nav .w100 > * { margin-right: -4px; display: inline-block;}
+        header #logo, header .mainMenu { vertical-align: middle;}
+        header > nav #logo {width: 8%; color: white; font-family: "SquareEB";}
+        header > nav .mainMenu {width: 72%; line-height: 80px; color: white;}
+            header > nav .mainMenu > ul {}
+                header > nav .mainMenu > ul > li {width: auto; display: inline-block; margin-right: calc(30px - 4px); }
+                    header > nav .mainMenu > ul > li a {font-family: "SquareB"; color: rgba(255, 255, 255, 0.8); font-size: 1.05em; transition: all .2s;}
+                    header > nav .mainMenu > ul > li a:hover { color: white;}
+        header > nav .exMenu { width: 20%; text-align: right;}
+            header > nav .exMenu > * { vertical-align: middle; margin-left: 5px;}
+            header > nav .exMenu > .search { cursor: pointer;}
+                header > nav .exMenu > .search i { display: inline; color: white; font-size: 1.1em;}
+            header > nav .exMenu > a { width: auto; padding: 7px 15px; font-size: 0.92em; color: white; display: inline-block; border: 1px solid white; border-radius: 50px; transition: all .2s;}
+header > nav .exMenu > a:hover { background: white; color: #ff7b7b;}
+    header > #visual { height: 100%;}
+        header > #visual .w100 { height: 100%;}
+            header > #visual ul { height: 100%; position: relative;}
+                header > #visual ul > li { height: 100%; position: absolute; top: 0; left: 0;}
+                    header > #visual ul > li > * {  position: absolute; top: 0; left: 0;}
+                    header > #visual ul > li > .contents { width: auto; height: auto; padding-left: 10%; z-index: 90; top: 50%; left: 0; transform: translate(0, -50%);}
+                        header > #visual ul > li > .contents span { background: white; border-radius: 5px; font-size: 0.85em; vertical-align: middle; color: #eb6363; font-family: "SquareEB"; padding: 5px;}
+                    header > #visual ul > li > img { width: 100%; height: 100%; z-index: 80;}
+
+#category { padding: 12px 0; background: #f5f5f5;}
+    #category .w100 {}
+        #category .w100 > ul {}
+            #category .w100 > ul > li { width: calc(100% / 5); display: inline-block; margin-right: -4px; vertical-align: middle; text-align: center; border-right: 1px solid #ddd; padding: 5px 0; cursor: pointer;}
+            #category .w100 > ul > li:hover img { filter: grayscale(0);}
+            #category .w100 > ul > li:hover span { color: #333;}
+                #category .w100 > ul > li:last-child { border: none;}
+                #category .w100 > ul > li > * { vertical-align: middle; margin-right: 10px; transition: all .3s;}
+                #category .w100 > ul > li > img { width: 35px; filter: grayscale(1);}
+                #category .w100 > ul > li > span { font-family: "SquareB"; color: #888;}
