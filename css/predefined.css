@@ -1,3 +1,6 @@
+* { width: 100%; height: auto; margin: 0; padding: 0; list-style: none; color: #333; text-decoration: none; box-sizing: border-box; font-family: "SquareR"; font-size: 0.98em; font-weight: normal;}
+html, body { height: 100%; min-height: 100%;}
+
 /* width */
 .w100 { width: 1080px; margin: 0 auto;}
 
