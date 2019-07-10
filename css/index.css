@@ -32,6 +32,8 @@ section > .contents > .category > ul > li > div:hover { background: white;}
 section > .contents > .category > ul > li > div:hover > img:last-child { opacity: 1;}
 section > .contents > .price { }
 section > .contents > .tag > ul { text-align: center; }
-section > .contents > .tag > ul { text-align: center; padding-top: 30px;}
-section > .contents > .tag > ul > li { min-width: 100px; width: auto; display: inline-block; border: 1px solid white; padding: 10px 20px; color: white; border-radius: 40px; margin: 5px; }
-section > .contents > .tag> ul > li:hover { color: #ff7b7b; background: white; transition: all .3s; }
+section > .contents > .tag > ul { text-align: center; padding-top: 40px;}
+section > .contents > .tag > ul > li { min-width: 100px; width: auto; display: inline-block; border: 1px solid white; padding: 9px 20px; color: white; border-radius: 40px; margin: 6px; }
+section > .contents > .tag > ul > li:hover { color: #ff7b7b; background: white; transition: all .3s; }
+section > .contents > div:last-child { width: 100px; height: 35px; border: 1px solid white; color: white; margin: auto; margin-top: 50px; border-radius: 50px; line-height: 35px; }
+section > .contents > div:last-child:hover { background: white; color: #ff7b7b; transition: all .3s}
