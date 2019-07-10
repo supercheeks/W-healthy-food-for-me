@@ -4,7 +4,7 @@ html, body { min-height: 100%;}
 #wrap { height: 100%; min-height: 100%;}
 
 header { height: 600px;}
-    header > nav { width: 100%; height: 80px; position: fixed; top: 0; left: 0; z-index: 100;}
+    header > nav { width: 100%; height: 80px; position: absolute; top: 0; left: 0; z-index: 100;}
         header > nav .w100 { border-bottom: 1px solid rgba(255, 255, 255, 0.5);}
             header > nav .w100 > * { margin-right: -4px; display: inline-block;}
         header #logo, header .mainMenu { vertical-align: middle;}
@@ -29,8 +29,8 @@ header > nav .exMenu > a:hover { background: white; color: #ff7b7b;}
                         header > #visual ul > li > .contents span { background: white; border-radius: 5px; font-size: 0.85em; vertical-align: middle; color: #eb6363; font-family: "SquareEB"; padding: 5px;}
                     header > #visual ul > li > img { width: 100%; height: 100%; z-index: 80;}
 
-#category { padding: 12px 0; background: #f5f5f5;}
-    #category .w100 {}
+#category { padding: 12px 0; background: #f5f5f5; border-bottom: 1px solid #bbb}
+    #category .w100 { }
         #category .w100 > ul {}
             #category .w100 > ul > li { width: calc(100% / 5); display: inline-block; margin-right: -4px; vertical-align: middle; text-align: center; border-right: 1px solid #ddd; padding: 5px 0; cursor: pointer;}
             #category .w100 > ul > li:hover img { filter: grayscale(0);}
@@ -39,3 +39,32 @@ header > nav .exMenu > a:hover { background: white; color: #ff7b7b;}
                 #category .w100 > ul > li > * { vertical-align: middle; margin-right: 10px; transition: all .3s;}
                 #category .w100 > ul > li > img { width: 35px; filter: grayscale(1);}
                 #category .w100 > ul > li > span { font-family: "SquareB"; color: #888;}
+
+#ranking { background: #eee;}
+    .title { height: 150px; text-align: center; padding-top: 50px; background: #eee;}
+        .title > h2, div { vertical-align: middle;}
+        .title > h2 { width: auto; height: auto; text-align: center; font-size: 1.97em; font-family: "SquareEB"; display: block; padding-bottom: 15px;}
+        .title > div {width: auto; height: auto; text-align: center;}
+            .title > div > span { width: 25px; height: 25px; border: 1px solid #aaa; background: #999; padding: 3px; border-radius: 30px; font-size: 0.7em; margin: 10px 10px; }
+            .line { width: 10%; height: 1px; border: 0.8px solid #ff7b7b; background: #ff7b7b; border-radius: 5px; display: inline-block;}
+
+    .content { background: #eee; text-align: center; vertical-align: top;}
+        .content > .left, .right { display: inline-block; }
+        .left { background: #ff7b7b; width: 30%; height: 600px; padding: 40px}
+            .left > p { width: auto; height: auto; color: white; text-align: center; line-height: 1.65; font-size: 0.9em; }
+            .left > div > ul { padding-top: 20px;}
+                .left > div > ul > li { display: inline-block; height: auto; width: auto; padding: 8px 0px;}
+                    .left > div > ul > li > a { font-size: 0.8em; color: white; width: auto; height: auto; border: 1px solid white; border-radius: 10px; padding: 4px 10px;}
+                    .left > div > ul > li > a:hover { color: #ff7b7b; background: white; }
+        .right { width: 50%; height: 600px; margin-left: 15px;}
+            .right > ul > li { width: 100%; height: 100px; background: white; margin-bottom: 25px; text-align: left; vertical-align: middle;}
+                .right > ul > li > * { display: inline-block; margin-right: -4px}
+                    .img { width: 20%; height: 100%; background: #aaa; text-align: center;}
+                    .detail { width: 55%; height: 100%; background: white; border-right: 1px solid #eee; text-align: left;}
+                        .detail > * { margin: 10px 5px;}
+                        .detail > h3 { width: auto; height: auto; border-left: 5px solid #ff7b7b; font-family: "SquareEB"; padding-left: 7px; font-size: 1.2em;}
+                        .detail > p { width: auto; height: auto; color: #aaa;}
+                        .detail > ul > * { display: inline-block; width: auto; height: auto; border: 1px solid #aaa; border-radius: 10px; padding: 3px 10px; margin: 3px 3px; font-size: 0.9em; margin-left: -3px; margin-top: 10px}
+                    .summary { width: 25%; height: 100%; background: white; text-align: center;}
+                        .summary > p { padding: 4px 0px; }
+                            .summary > p > i { color: #aaa}
