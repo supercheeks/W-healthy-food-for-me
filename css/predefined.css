@@ -8,10 +8,22 @@ html, body { height: 100%; min-height: 100%;}
 .red { color: #eb6363;}
 .brown { color: #432a2c;}
 .white { color: white;}
-.gradient { background: linear-gradient(to bottom, #ff8a6b, #eb6363);}
+.gradient { background: linear-gradient(90deg, #ff5858, #fe895b);}
 
 /* font */
 .font_EB { font-family: "SquareEB";}
 .font_B { font-family: "SquareB";}
 .font_R { font-family: "SquareR";}
 .font_L { font-family: "SquareL";}
+
+.hover_in_white:hover { background: white; color: #ff7b7b !important; transition: all .3s; cursor: pointer;}
+.selected { background: white; color: #ff7b7b !important;}
+.category .selected img:last-child { opacity: 1 !important;}
+
+@media screen and (max-width: 1080px) {
+    .w100 { width: 98%;}
+}
+
+@media screen and (max-width: 586px) {
+    section > .contents { width: 98% !important;}
+}
