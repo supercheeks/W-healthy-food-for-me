@@ -1,4 +1,3 @@
-    </div>
     <footer>
         <div class="w100">
             <div>

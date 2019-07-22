@@ -4,8 +4,18 @@ html, body { min-height: 100%;}
 #wrap { min-height: 100%; position: relative;}
 
 header { }
-#logo { width: 8%; height: auto; font-family="SquareEB"; color: white;}
-header > .w100 { border-bottom: 1px solid rgba(255, 255, 255, 0.5); padding: 15px 0; }
+#wrap.sub header * { color: #eb6363;}
+#wrap.sub header .w100 {  border: none;}
+#wrap.sub header .w100 > .exMenu > a { border: 1px solid #eb6363;}
+#wrap.sub header .w100 > .exMenu > a:hover { border: 1px solid #eb6363; background: #eb6363; color: white;}
+
+#wrap.sub header.redHeader * { color: white;}
+#wrap.sub header.redHeader .w100 > .exMenu > a { border: 1px solid white;}
+#wrap.sub header.redHeader .w100 > .exMenu > a:hover { background: white; color: #eb6363; border-color: #eb6363;}
+
+#logo { width: 8%; height: auto;}
+#logo a { font-family="SquareEB"; color: white;}
+header > .w100 { border-bottom: 1px solid rgba(255, 255, 255, 0.5); padding: 15px 0;}
 header > .w100 > * { vertical-align: middle; display: inline-block; margin-right: -4px;}
 header > .w100 > .mainMenu { width: 72%; height: auto; vertical-align: middle; }
 header > .w100 > .mainMenu > li { width: auto; height: auto; display: inline-block; padding: 0px 10px; } 
@@ -15,35 +25,37 @@ header > .w100 > .exMenu { width: 20%; text-align: right;}
 header > .w100 > .exMenu > a { width: auto; padding: 6px 18px; font-size: 0.92em; color: white; display: inline-block; border: 1px solid white; border-radius: 50px; transition: all .2s; margin-left : 6px}
 header > .w100 > .exMenu > a:hover { background: white; color: #ff7b7b; }
 
-#wrap > section { position: relative; width: 100%; height: calc(100% - 75px);}
-section > .contents { width: 586px; padding: 100px 0; text-align: center; margin:0 auto;}
-section > .contents * { color: white;}
-section > .contents > h2 { font-size: 1.5em;}
-#word { width: 100%; height: 45px; color: rgba(255, 255, 255, 0.8); background: rgba(255,255,255, 0); border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 50px; padding: 0px 15px; margin: 70px 0; transition: all .3s; }
-#word:focus { border: 1px solid white;}
+#wrap > section#main { position: relative; width: 100%; height: calc(100% - 75px);}
+section#main > .contents { width: 586px; padding: 100px 0; text-align: center; margin:0 auto;}
+section#main > .contents * { color: white;}
+section#main > .contents > h2 { font-size: 1.5em;}
+section#main > .contents > .search > #word { width: 100%; height: 45px; color: rgba(255, 255, 255, 0.8); background: rgba(255,255,255, 0); border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 50px; padding: 0px 15px; margin: 70px 0; transition: all .3s; }
+section#main > .contents > .search > #word:focus { border: 1px solid white;}
 input::placeholder { color: rgba(255, 255, 255, 0.7); }
 
-section > .contents > .category {}
-section > .contents > .category > ul { width: 100%; text-align: center; }
-section > .contents > .category > ul > li { width: calc(100% / 5); display: inline-block; margin-right: -4px; vertical-align: middle; text-align: center; cursor: pointer; }
-section > .contents > .category > ul > li > div { width:60px; height: 60px; border: 1px solid white; border-radius: 60px; text-align: center; display: inline-block; position: relative; transition: all .3s;}
-section > .contents > .category > ul > li > div > img { width: 55%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
-section > .contents > .category > ul > li > div > img:last-child { opacity: 0; transition: all .3s;}
-section > .contents > .category > ul > li > p { color: white; padding-top: 10px; }
-section > .contents > .category > ul > li > div:hover { background: white;}
-section > .contents > .category > ul > li > div:hover > img:last-child { opacity: 1;}
-section > .contents > .price { margin: 70px 0; position: relative;}
-section > .contents > .price .slider { background: none; border: 1px solid white; border-radius: 40px; height: 7px; width: 100%;}
-section > .contents > .price > span { position: absolute; width: 100px; top: 15px; text-align: center;}
+section#main > .contents > .category {}
+section#main > .contents > .category > ul { width: 100%; text-align: center; }
+section#main > .contents > .category > ul > li { width: calc(100% / 5); display: inline-block; margin-right: -4px; vertical-align: middle; text-align: center; cursor: pointer; }
+section#main > .contents > .category > ul > li > div { width:60px; height: 60px; border: 1px solid white; border-radius: 60px; text-align: center; display: inline-block; position: relative; transition: all .3s;}
+section#main > .contents > .category > ul > li > div > img { width: 55%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+section#main > .contents > .category > ul > li > div > img:last-child { opacity: 0; transition: all .3s;}
+section#main > .contents > .category > ul > li > p { color: white; padding-top: 10px; }
+section#main > .contents > .category > ul > li > div:hover { background: white;}
+section#main > .contents > .category > ul > li > div:hover > img:last-child { opacity: 1;}
+section#main > .contents > .price { margin: 70px 0; position: relative;}
+section#main > .contents > .price .slider { background: none; border: 1px solid white; border-radius: 40px; height: 7px; width: 100%;}
+section#main > .contents > .price > span { position: absolute; width: 100px; top: 15px; text-align: center;}
 .minPrice { left: 1%;}
 .maxPrice { left: 81%;}
-/*section > .contents > .price span.minPrice {}*/
+/*section#main > .contents > .price span.minPrice {}*/
 .ui-slider-range.ui-corner-all.ui-widget-header { opacity: 0.4;}
-section > .contents > .tag {}
-section > .contents > .tag > ul { text-align: center;}
-section > .contents > .tag > ul > li { min-width: 100px; width: auto; display: inline-block; border: 1px solid white; padding: 9px 20px; color: white; border-radius: 40px; margin: 6px; }
-section > .contents > .submit { height: auto; box-sizing: border-box; margin-top: 70px;}
-section > .contents > .submit a { padding: 12px 30px; border-radius: 100px; border: 1px solid white;}
+section#main > .contents > .tag {}
+section#main > .contents > .tag > ul { text-align: center;}
+section#main > .contents > .tag > ul > li { min-width: 100px; width: auto; display: inline-block; border: 1px solid white; padding: 9px 20px; color: white; border-radius: 40px; margin: 6px; }
+section#main > .contents > .submit { height: auto; box-sizing: border-box; margin-top: 70px;}
+section#main > .contents > .submit a { padding: 12px 30px; border-radius: 100px; border: 1px solid white;}
+
+/*.search, .category, .price, .tag { opacity: 0; padding-top: 100px; }*/
 
 /* footer */
 footer {}

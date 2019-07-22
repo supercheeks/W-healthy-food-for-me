@@ -9,6 +9,7 @@ html, body { height: 100%; min-height: 100%;}
 .brown { color: #432a2c;}
 .white { color: white;}
 .gradient { background: linear-gradient(90deg, #ff5858, #fe895b);}
+.gradientProduct { background: linear-gradient(to bottom, #fafafa, #f5f5f5);}
 
 /* font */
 .font_EB { font-family: "SquareEB";}
@@ -19,6 +20,10 @@ html, body { height: 100%; min-height: 100%;}
 .hover_in_white:hover { background: white; color: #ff7b7b !important; transition: all .3s; cursor: pointer;}
 .selected { background: white; color: #ff7b7b !important;}
 .category .selected img:last-child { opacity: 1 !important;}
+.inlineBlock { display: inline-block; margin-right: -4px; vertical-align: top; width: auto;}
+
+.tagWhite { transition: all .3s; background: white; border: 1px solid #ccc; color: #777; cursor: pointer; border-radius: 100px;}
+.tagWhite:hover { background: #eb6363; color: white; border-color: #eb6363;}
 
 @media screen and (max-width: 1080px) {
     .w100 { width: 98%;}
@@ -27,3 +32,12 @@ html, body { height: 100%; min-height: 100%;}
 @media screen and (max-width: 586px) {
     section > .contents { width: 98% !important;}
 }
+
+/* page/ranking/index.php */
+#sub { padding-bottom: 40px; border-bottom: 1px solid #eee; }
+#sub > .title { position: relative; height: 300px; background: url(/img/test.jpeg); background-size: cover; background-position: center;}
+#sub > .title > * { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+#sub > .title > .contents { z-index: 6; }
+#sub > .title > .contents .w100 {color: white; font-size: 2em; line-height: 300px;}
+#sub > .title > .cover { z-index: 4; opacity: 0.7;}
+#sub > .contents { margin-top: 40px;}

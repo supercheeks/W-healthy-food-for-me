@@ -1,0 +1,131 @@
+/* page/ranking/index.php */
+#sub.ranking { }
+    /* ranking contents */
+    #sub.ranking > .contents {}
+        #sub.ranking > .contents .w100 {}
+        #sub.ranking > .contents .w100 > * { display: inline-block; margin-right: -4px; vertical-align: top;}
+
+        /* left filtering contents */
+        #sub.ranking > .contents .w100 > .filter { width: 28%; margin-right: calc(4% - 4px); background: #f7f7f7; border: 1px solid #ddd; padding: 40px 20px; text-align: center;}
+            #sub.ranking > .contents .w100 > .filter > .search { }
+                #sub.ranking > .contents .w100 > .filter > .search #word { height: 35px; border-radius: 50px; border: 1px solid #ccc; background: transparent; padding: 0 10px; transition: all .3s;}
+                #sub.ranking > .contents .w100 > .filter > .search #word::placeholder { color: #ccc;}
+                #sub.ranking > .contents .w100 > .filter > .search #word:focus { border: 1px solid #eb6363;}
+
+            /* filter > category */
+            #sub.ranking > .contents .w100 > .filter > .category { margin-top: 30px;}
+                #sub.ranking > .contents .w100 > .filter > .category > ul { }
+                    #sub.ranking > .contents .w100 > .filter > .category > ul > li { display: inline-block; width: 30%; margin: 10px;}
+                        #sub.ranking > .contents .w100 > .filter > .category > ul > li > .img { width: 60px; height: 60px; display: inline-block; border-radius: 100px; border: 1px solid #ddd; padding: 14px 0; cursor: pointer;}
+                        #sub.ranking > .contents .w100 > .filter > .category > ul > li.select .img { border: 1px solid #eb6363;}
+                        #sub.ranking > .contents .w100 > .filter > .category > ul > li:nth-child(2) .img { padding: 16px 0;}
+                        #sub.ranking > .contents .w100 > .filter > .category > ul > li:nth-child(4) .img { padding: 20px 0;}
+                            #sub.ranking > .contents .w100 > .filter > .category > ul > li > .img > img { width: 55%; filter: grayscale(1); opacity: 0.5;}
+                            #sub.ranking > .contents .w100 > .filter > .category > ul > li.select .img img { filter: grayscale(0); opacity: 1;}
+                        #sub.ranking > .contents .w100 > .filter > .category > ul > li > p { color: #777; margin-top: 10px;}
+                            #sub.ranking > .contents .w100 > .filter > .category > ul > li.select p { color: #eb6363;}
+
+            /* filter > price */
+            #sub.ranking > .contents .w100 > .filter > .price {}
+
+            /* filter > tag */
+            #sub.ranking > .contents .w100 > .filter > .tag { margin-top: 20px;}
+                #sub.ranking > .contents .w100 > .filter > .tag > ul { }
+                    #sub.ranking > .contents .w100 > .filter > .tag > ul > li { width: auto; min-width: 60px; display: inline-block;  font-size: 1.05em; color: #aaa; border: 1px solid #ddd; padding: 8px 15px; border-radius: 100px; margin: 3px; cursor: pointer;}
+                    #sub.ranking > .contents .w100 > .filter > .tag > ul > li.select { color: #eb6363; border-color: #eb6363;}
+
+            /* filter submit link */
+            #sub.ranking > .contents .w100 > .filter > .submit { border-top: 1px solid #ddd; margin-top: 40px; padding-top: 40px;}
+                #sub.ranking > .contents .w100 > .filter > .submit a { color: #777; border: 1px solid #ccc; padding: 10px 30px; border-radius: 100px; transition: all .3s;}
+                #sub.ranking > .contents .w100 > .filter > .submit a:hover { background: #eb6363; color: white; border-color: #eb6363;}
+
+        /* right ranking contents */
+        #sub.ranking > .contents .w100 > .list { width: 68%; font-size: 1.1em; }
+            #sub.ranking > .contents .w100 > .list > ul { }
+                #sub.ranking > .contents .w100 > .list > ul > li { background: white; border: 1px solid #eee; margin-bottom: 20px; transition: all 0.3s; }
+                #sub.ranking > .contents .w100 > .list > ul > li:hover { box-shadow: 0px 0px 10px rgba(0,0,0,0.1);}
+                    #sub.ranking > .contents .w100 > .list > ul > li > div { display: inline-block; margin-right: -4px; vertical-align: top;}
+                    
+                    /* product image */
+                    #sub.ranking > .contents .w100 > .list > ul > li > div.img { width: 147px; height: 147px; position: relative;}
+                        #sub.ranking > .contents .w100 > .list > ul > li > div.img > span { background: #eb6363; color: white; width: 25px; height: 25px; line-height: 25px; display: inline-block; text-align: center; font-family: "SquareB"; }
+                        #sub.ranking > .contents .w100 > .list > ul > li > div.img > img { width: 70%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+                    /* product information */
+                    #sub.ranking > .contents .w100 > .list > ul > li > div.contents { width: calc(100% - 147px); height: 147px; padding: 20px;}
+                        #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div { display: inline-block; vertical-align: top; margin-right: -4px;}
+                        #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.left { width: 80%;}
+                            #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.left > h3 { font-size: 1.3em; line-height: 20px;}
+                                #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.left > h3 > span { }
+                                #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.left > h3 > span.bar { display: inline-block; width: 10px; height: 20px; background: #eb6363;}
+                                #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.left > h3 > span.red { margin-right: 5px;}
+                            #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.left > p { margin: 22px 0; color: #777;}
+                            #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.left > .tag { }
+                                #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.left > .tag > li { display: inline-block; width: auto; min-width: 50px; text-align: center; border: 1px solid #ccc; border-radius: 100px; padding: 7px 15px; color: #aaa; margin-right: 2px; }
+
+                        /* product summary (like, subscribe, # of comment) */
+                        #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.right { width: 20%; text-align: center; padding: 17px 0; border-left: 1px solid #eee;}
+                            #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.right > p { margin: 8px 0;}
+                                #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.right > p > * { color: #aaa;}
+                                #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.right > p i { display: inline; }
+                                #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.right > p span { width: 30px; display: inline-block;}
+
+#sub.rankingView {}
+    #sub.rankingView > .contents .w100 > .summary { }
+        #sub.rankingView > .contents .w100 > .summary > div.left { width: 300px; margin-right: calc(4% - 4px);}
+            #sub.rankingView > .contents .w100 > .summary > div.left > .img { width: 300px; height: 300px; position: relative; border: 1px solid #eee;}
+                #sub.rankingView > .contents .w100 > .summary > div.left > .img img { width: 80%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+            #sub.rankingView > .contents .w100 > .summary > div.left > .brand { margin-top: 10px;}
+                #sub.rankingView > .contents .w100 > .summary > div.left > .brand img { width: 50px;}
+                #sub.rankingView > .contents .w100 > .summary > div.left > .brand h3 { width: auto; line-height: 50px; margin: 0 10px; font-size: 1.3em;}
+                #sub.rankingView > .contents .w100 > .summary > div.left > .brand a { width: auto; line-height: 50px; text-decoration: underline; color: #eb6363;}
+            #sub.rankingView > .contents .w100 > .summary > div.left > .tag {}
+                #sub.rankingView > .contents .w100 > .summary > div.left > .tag li { padding: 8px 15px; margin-right: 3px;}
+
+    #sub.rankingView > .contents .w100 > .summary > div.right { width: calc(96% - 300px);}
+        #sub.rankingView > .contents .w100 > .summary > div.right > h3 { width: 100%; height: 25px; line-height: 25px; font-size: 1.5em; position: relative; margin-bottom: 20px;}
+            #sub.rankingView > .contents .w100 > .summary > div.right > h3 p { color: #999; position: absolute; top: 0; right: 0; width: auto; font-size: 0.65em;}
+        #sub.rankingView > .contents .w100 > .summary > div.right > div { font-size: 1.1em;}
+        #sub.rankingView > .contents .w100 > .summary > div.right > .info { border-top: 1px solid #ddd; margin-top: 30px;}
+            #sub.rankingView > .contents .w100 > .summary > div.right > .info > li { border-bottom: 1px solid #ddd; padding: 30px 0;}
+                #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > h4 { font-size: 1.3em; font-family: "SquareB"; margin-bottom: 20px;}
+                #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > ul { }
+                #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > ul.price { margin-bottom: 30px;}
+                    #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > ul.price > li { line-height: 20px; margin-bottom: 3px; }
+                        #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > ul.price > li > label { font-size: 1.2em;}
+                            #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > ul.price > li > label span { margin-left: 10px; }
+                        #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > ul.price > li > input { margin-top: 3px; margin-left: 30px;}
+                        #sub.rankingView > .contents .w100 > .summary > div.right > .info > li:first-child > div { margin-top: 10px;}
+                        #sub.rankingView > .contents .w100 > .summary > div.right > .info > li:first-child > div a { background: #21cb01; color: white; padding: 8px 15px; border-radius: 5px; border: 1px solid #1ebf00; transition: all .3s; }
+                        #sub.rankingView > .contents .w100 > .summary > div.right > .info > li:first-child > div a:hover { border-color: #21cb01; color: #1ebf00; background: white;}
+
+                #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > ul.list { }
+                    #sub.rankingView > .contents .w100 > .summary > div.right > .info > li.foldable.fold *:not(h4) { display: none;}
+                    #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > ul.list > li { text-align: center; width: 100px; margin: 10px 0;}
+                        #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > ul.list > li > div { width: 60px; height: 60px; display: inline-block; border-radius: 100px; background: white; position: relative;}
+                        #sub.rankingView > .contents .w100 > .summary > div.right > .info > li.table > table { border-collapse: collapse; border-top: 2px solid #eee; border-bottom: 2px solid #eee;}
+                        #sub.rankingView > .contents .w100 > .summary > div.right > .info > li.table > table td { font-size: 1.1em; padding: 10px; border-bottom: 1px solid #eee; line-height: 16px; }
+                            #sub.rankingView > .contents .w100 > .summary > div.right > .info > li.table > table td i { display: inline; font-size: 1.2em; color: #eb6363;  margin-left: 3px;}
+                        #sub.rankingView > .contents .w100 > .summary > div.right > .info > li.table > table .td1 { border-right: 1px solid #eee; width: 20%;  font-family: "SquareB";}
+                        #sub.rankingView > .contents .w100 > .summary > div.right > .info > li.table > table td:not(.td1) { color: #555;}
+                        #sub.rankingView > .contents .w100 > .summary > div.right > .info > li.table > table .td2 {  border-right: 1px solid #eee; width: 15%;}
+                        #sub.rankingView > .contents .w100 > .summary > div.right > .info > li.table > table .td3 { }
+                        .nutrientChart { border-radius: 100px; overflow: hidden; margin-bottom: 10px;}
+                        .nutrientChart > li { display: inline-block; margin-right: -4px; width: auto; text-align: center; padding: 5px 0;}
+                            .nutrientChart * { color: white;}
+                            .nutrientChart > li:nth-child(1) { background: #eb6363;}
+                            .nutrientChart > li:nth-child(2) { background: #f7944b;}
+                            .nutrientChart > li:nth-child(3) { background: #aebe34;}
+                            .nutrientChart > li:nth-child(4) { background: #57b241;}
+                            .nutrientChart > li:nth-child(5) { background: #41a5b2;}
+                            .nutrientChart > li:nth-child(6) { background: #4179b2;}
+                            .nutrientChart > li:nth-child(7) { background: #de61a9;}
+                            .nutrientChart > li:nth-child(8) { background: #ff7575;}
+                                .nutrientChart > li span {}
+                        #sub.rankingView > .contents .w100 > .summary > div.right > .info > li.icon > ul.list > li.active > div { border: 1px solid #eb6363;}
+                        #sub.rankingView > .contents .w100 > .summary > div.right > .info > li.icon > ul.list > li > div {border: 1px solid #ddd;}
+                            #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > ul.list > li > div img { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); filter: grayscale(1); opacity: 0.5;}
+                            #sub.rankingView > .contents .w100 > .summary > div.right > .info > li.icon > ul.list > li > div img { width: 50%;}
+                            #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > ul.list > li.active > div img { filter: grayscale(0); opacity: 1;}
+                        #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > ul.list > li > p { margin-top: 8px; font-size: 1em; line-height: 13px; color: #777;}
+                        #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > ul.list > li.active > p { color: #333;}
