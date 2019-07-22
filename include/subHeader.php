@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="/css/webfont.css" type="text/css">
     <link rel="stylesheet" href="/css/predefined.css">
     <link rel="stylesheet" href="/css/index.css" type="text/css">
+    <link rel="stylesheet" href="/css/sub.css" type="text/css">
     <link rel="stylesheet" href="/css/fontAwesome/css/all.min.css">
 </head> 
 <body>
-    <div id="wrap" class="gradient main">
+    <div id="wrap" class="sub">
         <header>
             <div class="w100">
                 <h1 id="logo">

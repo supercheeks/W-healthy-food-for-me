@@ -1,4 +1,4 @@
-<section>
+<section id="main">
     <div class="contents">
         <h2><span>헬푸미</span>가 원하시는 제품을 찾아드릴게요.</h2>
         <div class="search">
