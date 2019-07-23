@@ -2,73 +2,78 @@
 #sub.ranking { }
     /* ranking contents */
     #sub.ranking > .contents {}
-        #sub.ranking > .contents .w100 {}
-        #sub.ranking > .contents .w100 > * { display: inline-block; margin-right: -4px; vertical-align: top;}
+        .searchList .w100 {}
+        .searchList .w100 > * { display: inline-block; margin-right: -4px; vertical-align: top;}
 
         /* left filtering contents */
-        #sub.ranking > .contents .w100 > .filter { width: 28%; margin-right: calc(4% - 4px); background: #f7f7f7; border: 1px solid #ddd; padding: 40px 20px; text-align: center;}
-            #sub.ranking > .contents .w100 > .filter > .search { }
-                #sub.ranking > .contents .w100 > .filter > .search #word { height: 35px; border-radius: 50px; border: 1px solid #ccc; background: transparent; padding: 0 10px; transition: all .3s;}
-                #sub.ranking > .contents .w100 > .filter > .search #word::placeholder { color: #ccc;}
-                #sub.ranking > .contents .w100 > .filter > .search #word:focus { border: 1px solid #eb6363;}
+        .searchList .w100 > .filter { width: 28%; margin-right: calc(4% - 4px); background: #f7f7f7; border: 1px solid #ddd; padding: 40px 20px; text-align: center;}
+            .searchList .w100 > .filter > .search { }
+                .searchList .w100 > .filter > .search #word { height: 35px; border-radius: 50px; border: 1px solid #ccc; background: transparent; padding: 0 10px; transition: all .3s;}
+                .searchList .w100 > .filter > .search #word::placeholder { color: #ccc;}
+                .searchList .w100 > .filter > .search #word:focus { border: 1px solid #eb6363;}
 
             /* filter > category */
-            #sub.ranking > .contents .w100 > .filter > .category { margin-top: 30px;}
-                #sub.ranking > .contents .w100 > .filter > .category > ul { }
-                    #sub.ranking > .contents .w100 > .filter > .category > ul > li { display: inline-block; width: 30%; margin: 10px;}
-                        #sub.ranking > .contents .w100 > .filter > .category > ul > li > .img { width: 60px; height: 60px; display: inline-block; border-radius: 100px; border: 1px solid #ddd; padding: 14px 0; cursor: pointer;}
-                        #sub.ranking > .contents .w100 > .filter > .category > ul > li.select .img { border: 1px solid #eb6363;}
-                        #sub.ranking > .contents .w100 > .filter > .category > ul > li:nth-child(2) .img { padding: 16px 0;}
-                        #sub.ranking > .contents .w100 > .filter > .category > ul > li:nth-child(4) .img { padding: 20px 0;}
-                            #sub.ranking > .contents .w100 > .filter > .category > ul > li > .img > img { width: 55%; filter: grayscale(1); opacity: 0.5;}
-                            #sub.ranking > .contents .w100 > .filter > .category > ul > li.select .img img { filter: grayscale(0); opacity: 1;}
-                        #sub.ranking > .contents .w100 > .filter > .category > ul > li > p { color: #777; margin-top: 10px;}
-                            #sub.ranking > .contents .w100 > .filter > .category > ul > li.select p { color: #eb6363;}
+            .searchList .w100 > .filter > .category { margin-top: 30px;}
+                .searchList .w100 > .filter > .category > ul { }
+                    .searchList .w100 > .filter > .category > ul > li { display: inline-block; width: 30%; margin: 10px;}
+                        .searchList .w100 > .filter > .category > ul > li > .img { width: 60px; height: 60px; display: inline-block; border-radius: 100px; border: 1px solid #ddd; padding: 14px 0; cursor: pointer;}
+                        .searchList .w100 > .filter > .category > ul > li.select .img { border: 1px solid #eb6363;}
+                        .searchList .w100 > .filter > .category > ul > li:nth-child(2) .img { padding: 16px 0;}
+                        .searchList .w100 > .filter > .category > ul > li:nth-child(4) .img { padding: 20px 0;}
+                            .searchList .w100 > .filter > .category > ul > li > .img > img { width: 55%; filter: grayscale(1); opacity: 0.5;}
+                            .searchList .w100 > .filter > .category > ul > li.select .img img { filter: grayscale(0); opacity: 1;}
+                        .searchList .w100 > .filter > .category > ul > li > p { color: #777; margin-top: 10px;}
+                            .searchList .w100 > .filter > .category > ul > li.select p { color: #eb6363;}
 
             /* filter > price */
-            #sub.ranking > .contents .w100 > .filter > .price {}
+            .searchList .w100 > .filter > .price {}
 
             /* filter > tag */
-            #sub.ranking > .contents .w100 > .filter > .tag { margin-top: 20px;}
-                #sub.ranking > .contents .w100 > .filter > .tag > ul { }
-                    #sub.ranking > .contents .w100 > .filter > .tag > ul > li { width: auto; min-width: 60px; display: inline-block;  font-size: 1.05em; color: #aaa; border: 1px solid #ddd; padding: 8px 15px; border-radius: 100px; margin: 3px; cursor: pointer;}
-                    #sub.ranking > .contents .w100 > .filter > .tag > ul > li.select { color: #eb6363; border-color: #eb6363;}
+            .searchList .w100 > .filter > .tag { margin-top: 20px;}
+                .searchList .w100 > .filter > .tag > ul { }
+                    .searchList .w100 > .filter > .tag > ul > li { width: auto; min-width: 60px; display: inline-block;  font-size: 1.05em; color: #aaa; border: 1px solid #ddd; padding: 8px 15px; border-radius: 100px; margin: 3px; cursor: pointer;}
+                    .searchList .w100 > .filter > .tag > ul > li.select { color: #eb6363; border-color: #eb6363;}
 
             /* filter submit link */
-            #sub.ranking > .contents .w100 > .filter > .submit { border-top: 1px solid #ddd; margin-top: 40px; padding-top: 40px;}
-                #sub.ranking > .contents .w100 > .filter > .submit a { color: #777; border: 1px solid #ccc; padding: 10px 30px; border-radius: 100px; transition: all .3s;}
-                #sub.ranking > .contents .w100 > .filter > .submit a:hover { background: #eb6363; color: white; border-color: #eb6363;}
+            .searchList .w100 > .filter > .submit { border-top: 1px solid #ddd; margin-top: 40px; padding-top: 40px;}
+                .searchList .w100 > .filter > .submit a { color: #777; border: 1px solid #ccc; padding: 10px 30px; border-radius: 100px; transition: all .3s;}
+                .searchList .w100 > .filter > .submit a:hover { background: #eb6363; color: white; border-color: #eb6363;}
 
         /* right ranking contents */
-        #sub.ranking > .contents .w100 > .list { width: 68%; font-size: 1.1em; }
-            #sub.ranking > .contents .w100 > .list > ul { }
-                #sub.ranking > .contents .w100 > .list > ul > li { background: white; border: 1px solid #eee; margin-bottom: 20px; transition: all 0.3s; }
-                #sub.ranking > .contents .w100 > .list > ul > li:hover { box-shadow: 0px 0px 10px rgba(0,0,0,0.1);}
-                    #sub.ranking > .contents .w100 > .list > ul > li > div { display: inline-block; margin-right: -4px; vertical-align: top;}
+        .searchList .w100 > .list { width: 68%; font-size: 1.1em; }
+            .searchList .w100 > .list > ul { }
+                .searchList .w100 > .list > ul > li { background: white; border: 1px solid #eee; margin-bottom: 20px; transition: all 0.3s; }
+                .searchList .w100 > .list > ul > li:hover { box-shadow: 0px 0px 10px rgba(0,0,0,0.1);}
+                    .searchList .w100 > .list > ul > li > div { display: inline-block; margin-right: -4px; vertical-align: top;}
                     
                     /* product image */
-                    #sub.ranking > .contents .w100 > .list > ul > li > div.img { width: 147px; height: 147px; position: relative;}
-                        #sub.ranking > .contents .w100 > .list > ul > li > div.img > span { background: #eb6363; color: white; width: 25px; height: 25px; line-height: 25px; display: inline-block; text-align: center; font-family: "SquareB"; }
-                        #sub.ranking > .contents .w100 > .list > ul > li > div.img > img { width: 70%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+                    .searchList .w100 > .list > ul > li > div.img { width: 147px; height: 147px; position: relative; border-right: 1px solid #eee; overflow: hidden;}
+                    .brand .searchList .w100 > .list > ul > li > div.img { height: 100px;}
+                        .searchList .w100 > .list > ul > li > div.img > span { background: #eb6363; color: white; width: 25px; height: 25px; line-height: 25px; display: inline-block; text-align: center; font-family: "SquareB"; position: absolute; top: 0; left: 0; z-index: 555;}
+                        .searchList .w100 > .list > ul > li > div.img > img { width: 70%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+                        .brand .searchList .w100 > .list > ul > li > div.img > img { width: 100%;}
 
                     /* product information */
-                    #sub.ranking > .contents .w100 > .list > ul > li > div.contents { width: calc(100% - 147px); height: 147px; padding: 20px;}
-                        #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div { display: inline-block; vertical-align: top; margin-right: -4px;}
-                        #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.left { width: 80%;}
-                            #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.left > h3 { font-size: 1.3em; line-height: 20px;}
-                                #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.left > h3 > span { }
-                                #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.left > h3 > span.bar { display: inline-block; width: 10px; height: 20px; background: #eb6363;}
-                                #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.left > h3 > span.red { margin-right: 5px;}
-                            #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.left > p { margin: 22px 0; color: #777;}
-                            #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.left > .tag { }
-                                #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.left > .tag > li { display: inline-block; width: auto; min-width: 50px; text-align: center; border: 1px solid #ccc; border-radius: 100px; padding: 7px 15px; color: #aaa; margin-right: 2px; }
+                    .searchList .w100 > .list > ul > li > div.contents { width: calc(100% - 147px); height: 147px; padding: 20px;}
+                    .brand .searchList .w100 > .list > ul > li > div.contents { height: 100px; padding: 20px;}
+                        .searchList .w100 > .list > ul > li > div.contents > div { display: inline-block; vertical-align: top; margin-right: -4px;}
+                        .searchList .w100 > .list > ul > li > div.contents > div.left { width: 80%;}
+                            .searchList .w100 > .list > ul > li > div.contents > div.left > h3 { font-size: 1.3em; line-height: 20px;}
+                                .searchList .w100 > .list > ul > li > div.contents > div.left > h3 > span { }
+                                .searchList .w100 > .list > ul > li > div.contents > div.left > h3 > span.bar { display: inline-block; width: 10px; height: 20px; background: #eb6363;}
+                                .searchList .w100 > .list > ul > li > div.contents > div.left > h3 > span.red { margin-right: 5px;}
+                            .searchList .w100 > .list > ul > li > div.contents > div.left > p { margin: 22px 0; color: #777;}
+                            .searchList .w100 > .list > ul > li > div.contents > div.left > .tag { }
+                            .brand .searchList .w100 > .list > ul > li > div.contents > div.left > .tag {margin-top: 10px; }
+                                .searchList .w100 > .list > ul > li > div.contents > div.left > .tag > li { display: inline-block; width: auto; min-width: 50px; text-align: center; padding: 7px 15px; margin-right: 2px; margin-left: -2px; }
 
                         /* product summary (like, subscribe, # of comment) */
-                        #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.right { width: 20%; text-align: center; padding: 17px 0; border-left: 1px solid #eee;}
-                            #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.right > p { margin: 8px 0;}
-                                #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.right > p > * { color: #aaa;}
-                                #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.right > p i { display: inline; }
-                                #sub.ranking > .contents .w100 > .list > ul > li > div.contents > div.right > p span { width: 30px; display: inline-block;}
+                        .searchList .w100 > .list > ul > li > div.contents > div.right { width: 20%; text-align: center; padding: 17px 0; border-left: 1px solid #eee;}
+                        .brand .searchList .w100 > .list > ul > li > div.contents > div.right { padding: 5px 0;}
+                            .searchList .w100 > .list > ul > li > div.contents > div.right > p { margin: 8px 0;}
+                                .searchList .w100 > .list > ul > li > div.contents > div.right > p > * { color: #aaa;}
+                                .searchList .w100 > .list > ul > li > div.contents > div.right > p i { display: inline; }
+                                .searchList .w100 > .list > ul > li > div.contents > div.right > p span { width: 30px; display: inline-block;}
 
 #sub.rankingView {}
     #sub.rankingView > .contents .w100 > .summary { }
