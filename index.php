@@ -1,6 +1,18 @@
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/include/db.php";
 include $_SERVER["DOCUMENT_ROOT"]."/include/header.php";
+
+$main = array();
+$sub = array();
+$sql = " select * from category order by main asc ";
+$rs = $pdo -> prepare($sql);
+$rs -> execute();
+while($row = $rs -> fetch()) {
+    if($row["sub"] == 0)
+        $main[] = $row;
+    else
+        $sub[] = $row;
+}
 ?>
     <section id="main">
         <div class="contents">
@@ -10,41 +22,19 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/header.php";
             </div>
             <div class="category">
                 <ul class="w100">
+                <?php
+                foreach($main as $m) {    
+                ?>
                     <li>
-                        <div class="selectable">
-                            <img src="/img/icon1.png" alt="" title="">
-                            <img src="/img/icon1_.png" alt="" title="">
+                        <div class="selectable" data-idx="<?php echo $m['main']; ?>">
+                            <?php echo '<img src="/img/category'.$m['idx'].'.png" alt="category'.$m['idx'].'.png" title="'.$m['name'].'">';  ?>
+                            <?php echo '<img src="/img/category'.$m['idx'].'_.png" alt="category'.$m['idx'].'_.png" title="'.$m['name'].'">';  ?>
                         </div>
-                        <p>건강 간식</p>
+                        <p><?php echo $m["name"]; ?></p>
                     </li>
-                    <li>
-                        <div class="selectable">
-                            <img src="/img/icon2.png" alt="" title="">
-                            <img src="/img/icon2_.png" alt="" title="">
-                        </div>
-                        <p>건강 대용식</p>
-                    </li>
-                    <li>
-                        <div class="selectable">
-                            <img src="/img/icon3.png" alt="" title="">
-                            <img src="/img/icon3_.png" alt="" title="">
-                        </div>
-                        <p>다이어트 보조제</p>
-                    </li>
-                    <li>
-                        <div class="selectable">
-                            <img src="/img/icon4.png" alt="" title="">
-                            <img src="/img/icon4_.png" alt="" title="">
-                        </div>
-                        <p>헬스 보충제</p>
-                    </li>
-                    <li>
-                        <div class="selectable">
-                            <img src="/img/icon5.png" alt="" title="">
-                            <img src="/img/icon5_.png" alt="" title="">
-                        </div>
-                        <p>기타 건강식품</p>
-                    </li>
+                <?php
+                }    
+                ?>
                 </ul>
             </div>
             <div class="price">
@@ -54,13 +44,13 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/header.php";
             </div>
             <div class="tag">
                 <ul>
-                    <li class="hover_in_white selectable">체지방 감소</li>
-                    <li class="hover_in_white selectable">항산화 작용</li>
-                    <li class="hover_in_white selectable">간 건강</li>
-                    <li class="hover_in_white selectable">아토피</li>
-                    <li class="hover_in_white selectable">갱년기</li>
-                    <li class="hover_in_white selectable">근육량 증가</li>
-                    <li class="hover_in_white selectable">혈당 조절</li>
+                <?php
+                foreach($sub as $s) {    
+                ?>
+                    <li class="hover_in_white selectable" data-main="<?php echo $s['main']; ?>"><?php echo $s["name"]; ?></li>
+                <?php
+                }    
+                ?>
                 </ul>
             </div>
             <div class="submit">
@@ -72,12 +62,20 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/header.php";
 
 <script>
 $(function() {
+    on(".category .selectable", "click", function() {
+        $(".category .selectable").removeClass("selected");
+        $(".tag .selectable").removeClass("selected").hide();
+        $(".tag .selectable[data-main='"+ $(this).attr("data-idx") +"']").show();
+    });
+    
     on(".selectable", "click", function() {
         if($(this).hasClass("selected"))
             $(this).removeClass("selected");
         else
             $(this).addClass("selected");
     });
+    
+    $(".category .selectable").eq(0).click();
     
     var maxPrice = 100000;
     $(".price .slider").slider({
