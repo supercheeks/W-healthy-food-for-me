@@ -65,6 +65,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                 <h3>
                                     <a href="/page/brand/view.php">파시코</a>
                                 </h3>
+                                <div class="detail">브랜드설명 브랜드설명 브랜드설명</div>
                                 <ul class="tag">
                                     <li class="tagWhite">운동보충제</li>
                                 </ul>
@@ -91,6 +92,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                 <h3>
                                     <a href="/page/brand/view.php">파시코</a>
                                 </h3>
+                                <div class="detail">브랜드설명 브랜드설명 브랜드설명</div>
                                 <ul class="tag">
                                     <li class="tagWhite">운동보충제</li>
                                 </ul>
@@ -117,6 +119,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                 <h3>
                                     <a href="/page/brand/view.php">파시코</a>
                                 </h3>
+                                <div class="detail">브랜드설명 브랜드설명 브랜드설명</div>
                                 <ul class="tag">
                                     <li class="tagWhite">운동보충제</li>
                                 </ul>
@@ -143,6 +146,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                 <h3>
                                     <a href="/page/brand/view.php">파시코</a>
                                 </h3>
+                                <div class="detail">브랜드설명 브랜드설명 브랜드설명</div>
                                 <ul class="tag">
                                     <li class="tagWhite">운동보충제</li>
                                 </ul>
@@ -169,6 +173,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                 <h3>
                                     <a href="/page/brand/view.php">파시코</a>
                                 </h3>
+                                <div class="detail">브랜드설명 브랜드설명 브랜드설명</div>
                                 <ul class="tag">
                                     <li class="tagWhite">운동보충제</li>
                                 </ul>
@@ -195,6 +200,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                 <h3>
                                     <a href="/page/brand/view.php">파시코</a>
                                 </h3>
+                                <div class="detail">브랜드설명 브랜드설명 브랜드설명</div>
                                 <ul class="tag">
                                     <li class="tagWhite">운동보충제</li>
                                 </ul>
@@ -221,6 +227,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                 <h3>
                                     <a href="/page/brand/view.php">파시코</a>
                                 </h3>
+                                <div class="detail">브랜드설명 브랜드설명 브랜드설명</div>
                                 <ul class="tag">
                                     <li class="tagWhite">운동보충제</li>
                                 </ul>
@@ -247,6 +254,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                 <h3>
                                     <a href="/page/brand/view.php">파시코</a>
                                 </h3>
+                                <div class="detail">브랜드설명 브랜드설명 브랜드설명</div>
                                 <ul class="tag">
                                     <li class="tagWhite">운동보충제</li>
                                 </ul>
@@ -273,6 +281,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                 <h3>
                                     <a href="/page/brand/view.php">파시코</a>
                                 </h3>
+                                <div class="detail">브랜드설명 브랜드설명 브랜드설명</div>
                                 <ul class="tag">
                                     <li class="tagWhite">운동보충제</li>
                                 </ul>
@@ -299,6 +308,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                 <h3>
                                     <a href="/page/brand/view.php">파시코</a>
                                 </h3>
+                                <div class="detail">브랜드설명 브랜드설명 브랜드설명</div>
                                 <ul class="tag">
                                     <li class="tagWhite">운동보충제</li>
                                 </ul>
