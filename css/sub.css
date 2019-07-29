@@ -16,6 +16,7 @@
             .searchList .w100 > .filter > .category { margin-top: 30px;}
                 .searchList .w100 > .filter > .category > ul { }
                     .searchList .w100 > .filter > .category > ul > li { display: inline-block; width: 30%; margin: 10px;}
+                        .searchList .w100 > .filter > .category > ul > li * { transition: all .3s;}
                         .searchList .w100 > .filter > .category > ul > li > .img { width: 60px; height: 60px; display: inline-block; border-radius: 100px; border: 1px solid #ddd; padding: 14px 0; cursor: pointer;}
                         .searchList .w100 > .filter > .category > ul > li.select .img { border: 1px solid #eb6363;}
                         .searchList .w100 > .filter > .category > ul > li:nth-child(2) .img { padding: 16px 0;}
@@ -31,7 +32,7 @@
             /* filter > tag */
             .searchList .w100 > .filter > .tag { margin-top: 20px;}
                 .searchList .w100 > .filter > .tag > ul { }
-                    .searchList .w100 > .filter > .tag > ul > li { width: auto; min-width: 60px; display: inline-block;  font-size: 1.05em; color: #aaa; border: 1px solid #ddd; padding: 8px 15px; border-radius: 100px; margin: 3px; cursor: pointer;}
+                    .searchList .w100 > .filter > .tag > ul > li { width: auto; min-width: 60px; display: inline-block;  font-size: 1.05em; color: #aaa; border: 1px solid #ddd; padding: 8px 15px; border-radius: 100px; margin: 3px; cursor: pointer; transition: all .3s;}
                     .searchList .w100 > .filter > .tag > ul > li.select { color: #eb6363; border-color: #eb6363;}
 
             /* filter submit link */

@@ -3,7 +3,7 @@ html, body { min-height: 100%;}
 
 #wrap { min-height: 100%; position: relative;}
 
-header { }
+header { transition: all .3s; }
 #wrap.sub header * { color: #eb6363;}
 #wrap.sub header .w100 {  border: none;}
 #wrap.sub header .w100 > .exMenu > a { border: 1px solid #eb6363;}
