@@ -232,8 +232,462 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                     </ul>
                 </div>
             </div>
-            
-            <div class="review"></div>
+            <div class="review">
+                <div class="text">
+                    <h1 class="inlineBlock">평점</h1>
+                    <i class="fas fa-star inlineBlock"></i>
+                    <div class="inlineBlock">4.7 / 5.0</div>
+                </div>
+                <div class="summary">
+                   <div class="inlineBlock">
+                       <ul>
+                        <li>
+                            <h5 class="inlineBlock">A</h5>
+                            <div class="inlineBlock">&nbsp;</div>
+                        </li>
+                        <li>
+                            <h5 class="inlineBlock">B</h5>
+                            <div class="inlineBlock">&nbsp;</div>
+                        </li>
+                        <li>
+                            <h5 class="inlineBlock">C</h5>
+                            <div class="inlineBlock">&nbsp;</div>
+                        </li>
+                        <li>
+                            <h5 class="inlineBlock">D</h5>
+                            <div class="inlineBlock">&nbsp;</div>
+                        </li>
+                       </ul>
+                   </div>
+                    <div class="inlineBlock">
+                       <ul>
+                        <li>
+                            <h5 class="inlineBlock">E</h5>
+                            <div class="inlineBlock">&nbsp;</div>
+                        </li>
+                        <li>
+                            <h5 class="inlineBlock">F</h5>
+                            <div class="inlineBlock">&nbsp;</div>
+                        </li>
+                        <li>
+                            <h5 class="inlineBlock">G</h5>
+                            <div class="inlineBlock">&nbsp;</div>
+                        </li>
+                        <li>
+                            <h5 class="inlineBlock">H</h5>
+                            <div class="inlineBlock">&nbsp;</div>
+                        </li>
+                       </ul>
+                   </div>           
+                </div>
+                <div class="contents">
+                    <div class="filter inlineBlock">
+                        <div class="title inlineBlock">
+                            <i class="fas fa-filter inlineBlock"></i>
+                            <span>필터</span>
+                        </div>
+                        <div class="subtitle inlineBlock">
+                            <i class="fas fa-retweet inlineBlock"></i>
+                            <span>초기화</span>
+                        </div>
+                        <div class="choose">
+                            <ul>
+                                <li>
+                                    <div>성별</div>
+                                    <ul>
+                                        <li>전체</li>
+                                        <li>남자</li>
+                                        <li>여자</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>나이</div>
+                                    <ul>
+                                        <li>전체</li>
+                                        <li>20대</li>
+                                        <li>30대 이상</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>활동성</div>
+                                    <ul>
+                                        <li>전체</li>
+                                        <li>활발</li>
+                                        <li>안활발</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>식단조절</div>
+                                    <ul>
+                                        <li>전체</li>
+                                        <li>한다</li>
+                                        <li>안한다</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>목적</div>
+                                    <ul>
+                                        <li>전체</li>
+                                        <li>다이어트</li>
+                                        <li>체력증진</li>
+                                        <li>근육증가</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>적용</div>
+                    </div>
+                    <div class="list inlineBlock">
+                        <div class="title">
+                            <div class="inlineBlock">리뷰</div>
+                            <div class="inlineBlock">정렬방법</div>
+                        </div>
+                        <div class="contents">
+                            <ul>
+                                <li>
+                                    <div class="personal">
+                                        <div class="inlineBlock">
+                                            <div class="inlineBlock">&nbsp;</div>
+                                            <div class="info inlineBlock">
+                                                <div class="inlineBlock">Name</div>
+                                                <div class="star inlineBlock">
+                                                    <i class="fas fa-star inlineBlock"></i>
+                                                    <div class="inlineBlock">4.7 / 5.0</div>
+                                                </div>
+                                                <ul>
+                                                    <li>여자</li>
+                                                    <li>20대</li>
+                                                    <li>활동성 큼</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="inlineBlock">2분 전</div>
+                                    </div>
+                                    <div class="picture">
+                                        <ul>
+                                            <li>picture</li>
+                                            <li>picture</li>
+                                            <li>picture</li>
+                                        </ul>
+                                    </div>
+                                    <div class="comment">
+                                        <div class="inlineBlock">한줄평</div>
+                                        <div class="inlineBlock">좋아요 맛있어요 좋아요 맛있어요</div>
+                                    </div>
+                                    <div class="chosen">
+                                        <div class="inlineBlock">
+                                            <ul>
+                                                <li>
+                                                    <h5>A</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h5>B</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h5>C</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h5>D</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="inlineBlock">
+                                            <ul>
+                                                <li>
+                                                    <h5>E</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h5>F</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h5>G</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h5>H</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="personal">
+                                        <div class="inlineBlock">
+                                            <div class="inlineBlock">&nbsp;</div>
+                                            <div class="info inlineBlock">
+                                                <div class="inlineBlock">Name</div>
+                                                <div class="star inlineBlock">
+                                                    <i class="fas fa-star inlineBlock"></i>
+                                                    <div class="inlineBlock">4.7 / 5.0</div>
+                                                </div>
+                                                <ul>
+                                                    <li>여자</li>
+                                                    <li>20대</li>
+                                                    <li>활동성 큼</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="inlineBlock">2분 전</div>
+                                    </div>
+                                    <div class="picture">
+                                        <ul>
+                                            <li>picture</li>
+                                            <li>picture</li>
+                                            <li>picture</li>
+                                        </ul>
+                                    </div>
+                                    <div class="comment">
+                                        <div class="inlineBlock">한줄평</div>
+                                        <div class="inlineBlock">좋아요 맛있어요 좋아요 맛있어요</div>
+                                    </div>
+                                    <div class="chosen">
+                                        <div class="inlineBlock">
+                                            <ul>
+                                                <li>
+                                                    <h5>A</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h5>B</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h5>C</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h5>D</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="inlineBlock">
+                                            <ul>
+                                                <li>
+                                                    <h5>E</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h5>F</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h5>G</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h5>H</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="personal">
+                                        <div class="inlineBlock">
+                                            <div class="inlineBlock">&nbsp;</div>
+                                            <div class="info inlineBlock">
+                                                <div class="inlineBlock">Name</div>
+                                                <div class="star inlineBlock">
+                                                    <i class="fas fa-star inlineBlock"></i>
+                                                    <div class="inlineBlock">4.7 / 5.0</div>
+                                                </div>
+                                                <ul>
+                                                    <li>여자</li>
+                                                    <li>20대</li>
+                                                    <li>활동성 큼</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="inlineBlock">2분 전</div>
+                                    </div>
+                                    <div class="picture">
+                                        <ul>
+                                            <li>picture</li>
+                                            <li>picture</li>
+                                            <li>picture</li>
+                                        </ul>
+                                    </div>
+                                    <div class="comment">
+                                        <div class="inlineBlock">한줄평</div>
+                                        <div class="inlineBlock">좋아요 맛있어요 좋아요 맛있어요</div>
+                                    </div>
+                                    <div class="chosen">
+                                        <div class="inlineBlock">
+                                            <ul>
+                                                <li>
+                                                    <h5>A</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h5>B</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h5>C</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h5>D</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="inlineBlock">
+                                            <ul>
+                                                <li>
+                                                    <h5>E</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h5>F</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h5>G</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h5>H</h5>
+                                                    <ul>
+                                                        <li>1점</li>
+                                                        <li>2점</li>
+                                                        <li>3점</li>
+                                                        <li>4점</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
