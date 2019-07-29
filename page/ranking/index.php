@@ -1,6 +1,19 @@
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/include/db.php";
 include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
+
+$main = array();
+$sub = array();
+
+$sql = " select * from category order by main asc ";
+$rs = $pdo -> prepare($sql);
+$rs -> execute();
+while($row = $rs -> fetch()) {
+    if($row["sub"] == 0)
+        $main[] = $row;
+    else
+        $sub[] = $row;
+}
 ?>
 <section id="sub" class="ranking">
     <div class="title">
@@ -9,7 +22,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
        </div>
        <div class="cover gradient">&nbsp;</div>
     </div>
-    <div class="contents">
+    <div class="contents searchList">
         <div class="w100">
             <div class="filter">
                 <div class="search">
@@ -17,51 +30,30 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                 </div>
                 <div class="category">
                     <ul>
-                        <li class="select">
-                            <div class="img">
-                                <img src="/img/icon1_.png" alt="">
-<!--                                <img src="/img/icon1.png" alt="">-->
-                            </div>
-                            <p>건강 간식</p>
-                        </li>
+                    <?php
+                    foreach($main as $m) {    
+                    ?>
                         <li>
                             <div class="img">
-                                <img src="/img/icon2_.png" alt="">
-<!--                                <img src="/img/icon1.png" alt="">-->
+                                <?php echo "<img src='/img/category".$m["idx"]."_.png' alt='category".$m["idx"]."_.png' title='".$m["name"]."'>"; ?>
                             </div>
-                            <p>건강 대용식</p>
+                            <p><?php echo $m["name"]; ?></p>
                         </li>
-                        <li>
-                            <div class="img">
-                                <img src="/img/icon3_.png" alt="">
-<!--                                <img src="/img/icon1.png" alt="">-->
-                            </div>
-                            <p>다이어트 보조제</p>
-                        </li>
-                        <li>
-                            <div class="img">
-                                <img src="/img/icon4_.png" alt="">
-<!--                                <img src="/img/icon1.png" alt="">-->
-                            </div>
-                            <p>헬스 보충제</p>
-                        </li>
-                        <li>
-                            <div class="img">
-                                <img src="/img/icon5_.png" alt="">
-<!--                                <img src="/img/icon1.png" alt="">-->
-                            </div>
-                            <p>기타 건강식품</p>
-                        </li>
+                    <?php
+                    }    
+                    ?>
                     </ul>
                 </div>
                 <div class="price">&nbsp;</div>
                 <div class="tag">
                     <ul>
-                        <li class="select">젤리</li>
-                        <li>제과류</li>
-                        <li>에너지바</li>
-                        <li>요거트</li>
-                        <li>견과류</li>
+                    <?php
+                    foreach($sub as $s) {    
+                    ?>
+                        <li><?php echo $s["name"]; ?></li>
+                    <?php
+                    }    
+                    ?>
                     </ul>
                 </div>
                 <div class="submit">
@@ -86,9 +78,9 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                     25g \2,500 / 50g \4,500
                                 </p>
                                 <ul class="tag">
-                                    <li>젤리</li>
-                                    <li>배고플때</li>
-                                    <li>복숭아맛</li>
+                                    <li class="tagWhite">젤리</li>
+                                    <li class="tagWhite">배고플때</li>
+                                    <li class="tagWhite">복숭아맛</li>
                                 </ul>
                             </div>
                             <div class="right">
@@ -123,9 +115,9 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                     25g \2,500 / 50g \4,500
                                 </p>
                                 <ul class="tag">
-                                    <li>젤리</li>
-                                    <li>배고플때</li>
-                                    <li>복숭아맛</li>
+                                    <li class="tagWhite">젤리</li>
+                                    <li class="tagWhite">배고플때</li>
+                                    <li class="tagWhite">복숭아맛</li>
                                 </ul>
                             </div>
                             <div class="right">
@@ -160,9 +152,9 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                     25g \2,500 / 50g \4,500
                                 </p>
                                 <ul class="tag">
-                                    <li>젤리</li>
-                                    <li>배고플때</li>
-                                    <li>복숭아맛</li>
+                                    <li class="tagWhite">젤리</li>
+                                    <li class="tagWhite">배고플때</li>
+                                    <li class="tagWhite">복숭아맛</li>
                                 </ul>
                             </div>
                             <div class="right">
@@ -197,9 +189,9 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                     25g \2,500 / 50g \4,500
                                 </p>
                                 <ul class="tag">
-                                    <li>젤리</li>
-                                    <li>배고플때</li>
-                                    <li>복숭아맛</li>
+                                    <li class="tagWhite">젤리</li>
+                                    <li class="tagWhite">배고플때</li>
+                                    <li class="tagWhite">복숭아맛</li>
                                 </ul>
                             </div>
                             <div class="right">
@@ -234,9 +226,9 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                     25g \2,500 / 50g \4,500
                                 </p>
                                 <ul class="tag">
-                                    <li>젤리</li>
-                                    <li>배고플때</li>
-                                    <li>복숭아맛</li>
+                                    <li class="tagWhite">젤리</li>
+                                    <li class="tagWhite">배고플때</li>
+                                    <li class="tagWhite">복숭아맛</li>
                                 </ul>
                             </div>
                             <div class="right">
@@ -271,9 +263,9 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                     25g \2,500 / 50g \4,500
                                 </p>
                                 <ul class="tag">
-                                    <li>젤리</li>
-                                    <li>배고플때</li>
-                                    <li>복숭아맛</li>
+                                    <li class="tagWhite">젤리</li>
+                                    <li class="tagWhite">배고플때</li>
+                                    <li class="tagWhite">복숭아맛</li>
                                 </ul>
                             </div>
                             <div class="right">
@@ -308,9 +300,9 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                     25g \2,500 / 50g \4,500
                                 </p>
                                 <ul class="tag">
-                                    <li>젤리</li>
-                                    <li>배고플때</li>
-                                    <li>복숭아맛</li>
+                                    <li class="tagWhite">젤리</li>
+                                    <li class="tagWhite">배고플때</li>
+                                    <li class="tagWhite">복숭아맛</li>
                                 </ul>
                             </div>
                             <div class="right">
@@ -345,9 +337,9 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                     25g \2,500 / 50g \4,500
                                 </p>
                                 <ul class="tag">
-                                    <li>젤리</li>
-                                    <li>배고플때</li>
-                                    <li>복숭아맛</li>
+                                    <li class="tagWhite">젤리</li>
+                                    <li class="tagWhite">배고플때</li>
+                                    <li class="tagWhite">복숭아맛</li>
                                 </ul>
                             </div>
                             <div class="right">
@@ -382,9 +374,9 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                     25g \2,500 / 50g \4,500
                                 </p>
                                 <ul class="tag">
-                                    <li>젤리</li>
-                                    <li>배고플때</li>
-                                    <li>복숭아맛</li>
+                                    <li class="tagWhite">젤리</li>
+                                    <li class="tagWhite">배고플때</li>
+                                    <li class="tagWhite">복숭아맛</li>
                                 </ul>
                             </div>
                             <div class="right">
@@ -419,9 +411,9 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                     25g \2,500 / 50g \4,500
                                 </p>
                                 <ul class="tag">
-                                    <li>젤리</li>
-                                    <li>배고플때</li>
-                                    <li>복숭아맛</li>
+                                    <li class="tagWhite">젤리</li>
+                                    <li class="tagWhite">배고플때</li>
+                                    <li class="tagWhite">복숭아맛</li>
                                 </ul>
                             </div>
                             <div class="right">
@@ -445,6 +437,18 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
         </div>
     </div>
 </section>
+
+<script>
+$(function() {
+    on(".tag li", "click", function(e) {
+        $(this).toggleClass("select");
+    });
+    
+    on(".category .img", "click", function(e) {
+        $(this).parents("li").toggleClass("select");
+    });
+});
+</script>
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/include/footer.php";
 ?>
