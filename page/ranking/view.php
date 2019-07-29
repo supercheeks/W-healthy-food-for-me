@@ -14,7 +14,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                     <div class="brand">
                         <img src="/img/brandTest.jpg" alt="" class="inlineBlock">
                         <h3 class="inlineBlock font_B">글램디</h3>
-                        <a href="#" class="inlineBlock">자세히 보기</a>
+                        <a href="/page/brand/view.php" class="inlineBlock">자세히 보기</a>
                     </div>
                     
                     <ul class="tag">
