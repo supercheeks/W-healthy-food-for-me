@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Healthy Food for ME</title>
+    <title>Healthy Foods for ME</title>
     <!--view port-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/js/jqueryui/external/jquery/jquery.js"></script>

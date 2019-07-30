@@ -12,9 +12,9 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
     <div class="contents">
         <div class="w100">
             <div class="list inlineBlock">
-                <h3>목록</h3>
+                <h3>커뮤니티</h3>
                 <ul>
-                    <li>
+                    <li class="active">
                         <div class="inlineBlock">자유게시판</div>
                         <i class="fas fa-angle-right inlineBlock"></i>
                     </li>
@@ -38,29 +38,42 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                         </tr>
                     </thead>
                     <tbody>
+                       <?php
+                        $sql = " select count(*) from board ";
+                        $totals = $pdo -> prepare($sql);
+                        $totals -> execute();
+                        $total = $totals -> fetchColumn();
+                        $currPage = (isset($_GET['page']))?$_GET['page']:0;
+                        $cnt = 10;
+                        $totalPage= $total/$cnt;
+                        
+                        $sql = " select * from board order by wdate desc limit ".(($currPage)*$cnt).", ".$cnt;
+                    
+                        $rs = $pdo->prepare($sql);
+                        $rs -> execute();
+                        while($result = $rs->fetch()){
+                        ?>
                         <tr>
-                            <td>1</td>
-                            <td>제목제목</td>
-                            <td>홍길동</td>
-                            <td>2019-07-29</td>
-                            <td>53</td>
+                            <td><?php echo $result['idx']; ?></td>
+                            <td><a href="/page/board/view.php?idx=<?php echo $result['idx']; ?>"><?php echo $result['title']; ?></a></td>
+                            <td><?php echo $result['writer']; ?></td>
+                            <td><?php echo $result['wdate']; ?></td>
+                            <td><?php echo $result['view']?></td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>제목제목</td>
-                            <td>홍길동</td>
-                            <td>2019-07-29</td>
-                            <td>55</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>제목제목</td>
-                            <td>홍길동</td>
-                            <td>2019-07-29</td>
-                            <td>5</td>
-                        </tr>
+                        <?php
+                        }?>
                     </tbody>
                 </table>
+                <?php 
+                $pageCut = 5;
+                $start = ($currPage/$pageCut);
+                for($i=($start*$pageCut)+1; $i <= ($start * $pageCut)+$pageCut; $i++){
+                ?>
+                <a href="/page/board/index.php?page=<?php echo $i; ?>" class="inlineBlock"><?php echo $i; ?></a>
+                <?php 
+                }
+                ?>
+                <a href="/page/board/write.php">글쓰기</a>
             </div>
         </div>
     </div>
