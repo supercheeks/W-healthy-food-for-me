@@ -1,3 +1,5 @@
+#sub > .contents { min-height: 300px; }
+
 /* page/ranking/index.php */
 #sub.ranking { }
     /* ranking contents */
@@ -49,14 +51,14 @@
                     
                     /* product image */
                     .searchList .w100 > .list > ul > li > div.img { width: 147px; height: 147px; position: relative; border-right: 1px solid #eee; overflow: hidden;}
-                    .brand .searchList .w100 > .list > ul > li > div.img { height: 100px;}
+                    .brand .searchList .w100 > .list > ul > li > div.img { height: 120px;}
                         .searchList .w100 > .list > ul > li > div.img > span { background: #eb6363; color: white; width: 25px; height: 25px; line-height: 25px; display: inline-block; text-align: center; font-family: "SquareB"; position: absolute; top: 0; left: 0; z-index: 555;}
                         .searchList .w100 > .list > ul > li > div.img > img { width: 70%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
                         .brand .searchList .w100 > .list > ul > li > div.img > img { width: 100%;}
 
                     /* product information */
                     .searchList .w100 > .list > ul > li > div.contents { width: calc(100% - 147px); height: 147px; padding: 20px;}
-                    .brand .searchList .w100 > .list > ul > li > div.contents { height: 100px; padding: 20px;}
+                    .brand .searchList .w100 > .list > ul > li > div.contents { height: 120px; padding: 20px;}
                         .searchList .w100 > .list > ul > li > div.contents > div { display: inline-block; vertical-align: top; margin-right: -4px;}
                         .searchList .w100 > .list > ul > li > div.contents > div.left { width: 80%;}
                             .searchList .w100 > .list > ul > li > div.contents > div.left > h3 { font-size: 1.3em; line-height: 20px;}
@@ -70,7 +72,7 @@
 
                         /* product summary (like, subscribe, # of comment) */
                         .searchList .w100 > .list > ul > li > div.contents > div.right { width: 20%; text-align: center; padding: 17px 0; border-left: 1px solid #eee;}
-                        .brand .searchList .w100 > .list > ul > li > div.contents > div.right { padding: 5px 0;}
+                        .brand .searchList .w100 > .list > ul > li > div.contents > div.right { padding: 17px 0;}
                             .searchList .w100 > .list > ul > li > div.contents > div.right > p { margin: 8px 0;}
                                 .searchList .w100 > .list > ul > li > div.contents > div.right > p > * { color: #aaa;}
                                 .searchList .w100 > .list > ul > li > div.contents > div.right > p i { display: inline; }
@@ -136,6 +138,7 @@
                         #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > ul.list > li.active > p { color: #333;}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     #sub.rankingView > .contents .w100 > .review { padding-top: 60px; }
         #sub.rankingView > .contents .w100 > .review > .text > h1 { font-size: 2em; font-family: SquareB; vertical-align: middle; padding-left: 10px; }
         #sub.rankingView > .contents .w100 > .review > .text > i { color: #ffdc37; font-size: 1.5em; padding-left: 15px; padding-right: 10px; vertical-align: middle; }
@@ -188,8 +191,10 @@
                     #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .chosen > div > ul > li > ul > li:nth-child(2) { background: #eb6363; color: white; border: none; }
 
 
+=======
+>>>>>>> 30e3fc329158fd001bfc08a7266a1740b23d89e5
 .review { margin-top: 50px; }
-.review h4 { font-size: 1.6em; font-family: "SquareB";}
+.review h4 { font-size: 1.8em; font-family: "SquareB";}
     .review > div {}
     .review > .left { width: 300px; margin-right: calc(4% - 4px); background: #fafafa; border: 1px solid #ddd; padding: 30px 20px;}
         .review > .left > div {}
@@ -262,7 +267,7 @@
 #sub.ranking > .contents .w100 > .list > .item > div:last-child > div { float: right; vertical-align: middle; padding-right: 5px; font-size: 0.97em; }
 
 /* page/brand/index.php */
-#sub.brand > .searchList .w100 > .list > ul > li > .contents > .left > .detail { font-size: 0.8em; color: #999; padding-top: 5px; margin-bottom: -4px; }
+#sub.brand > .searchList .w100 > .list > ul > li > .contents > .left > .detail { font-size: 0.9em; color: #999; margin-top: 10px;}
 
 /* page/board/index.php */
 #sub.community > .contents .w100 > .list { width: 25%; margin-right: -4px; }
@@ -326,5 +331,39 @@
 #sub.community > .contents .w100 > .board > .write > form > ul > li > input { font-size: 0.8em; padding: 5px; order: 1px solid #ccc; margin: 10px 0px; }
 #sub.community > .contents .w100 > .board > .write > form > ul > li:last-child > textarea { font-size: 0.8em; margin: 10px 0px; padding: 5px; height: 200px; }
 #sub.community > .contents .w100 > .board > .write > form > ul > li:last-child { border-bottom: 1px solid #eb6363; margin-bottom: 20px; }
+<<<<<<< HEAD
 #sub.community > .contents .w100 > .board > .write > form > button { width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; float: right; padding: 10px 25px; }
 #sub.community > .contents .w100 > .board > .write > form > a { width: auto; height: auto; background: #eb6363; border: 1px solid #eb6363; color: white; float: right; padding: 10px 25px; margin-right: 10px; }
+=======
+#sub.community > .contents .w100 > .board > .write > form > button { width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; cursor: pointer; float: right; padding: 7px 15px; border-radius: 20px; }
+#sub.community > .contents .w100 > .board > .write > a { width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; cursor: pointer; float: right; padding: 7px 15px; border-radius: 20px; margin-right: 10px; }
+
+.button { width: auto; min-width:120px; text-align: center; padding: 12px 30px; border-radius: 100px; border: 1px solid #ddd; display: inline-block;}
+.button-red { color: #eb6363 !important; border-color: #eb6363;}
+
+#sub.login { }
+    #sub.login > .contents { }
+        #sub.login > .contents .w100 { width: 950px; height: 500px; position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%); box-shadow: 0px 0px 20px rgba(0,0,0,0.3);}
+            #sub.login > .contents .w100 > div { height: 100%;}
+            #sub.login > .contents .w100 > .left { width: 35%; background: #333; text-align: center; position: relative;}
+                #sub.login > .contents .w100 > .left * { color: white;}
+                #sub.login > .contents .w100 > .left > .contents { position: absolute; width: 100%; padding: 30px; top: 50%; left: 0; transform: translate(0, -50%);}
+                    #sub.login > .contents .w100 > .left > .contents > h2 { font-size: 1.6em; margin-bottom: 20px;}
+                        #sub.login > .contents .w100 > .left > .contents > h2 span { color: #eb6363; }
+                    #sub.login > .contents .w100 > .left > .contents > p { letter-spacing: 0.3px; line-height: 16px; margin-bottom: 50px; }
+                    #sub.login > .contents .w100 > .left > .contents > .account { }
+                        #sub.login > .contents .w100 > .left > .contents > .account p { opacity: 0.5; margin-bottom: 10px; }
+                        #sub.login > .contents .w100 > .left > .contents > .account a { }
+            #sub.login > .contents .w100 > .right { width: 65%; background: white; }
+                #sub.login > .contents .w100 > .right > h2 { }
+                #sub.login > .contents .w100 > .right > form { }
+                    #sub.login > .contents .w100 > .right > form > ul { }
+                        #sub.login > .contents .w100 > .right > form > ul > li { }
+                            #sub.login > .contents .w100 > .right > form > ul > li label { }
+                            #sub.login > .contents .w100 > .right > form > ul > li input { }
+                            #sub.login > .contents .w100 > .right > form > ul > li a { }
+                #sub.login > .contents .w100 > .right > .socialAPI { }
+                    #sub.login > .contents .w100 > .right > .socialAPI > p { }
+                    #sub.login > .contents .w100 > .right > .socialAPI > ul { }
+                        #sub.login > .contents .w100 > .right > .socialAPI > ul > li { }
+>>>>>>> 30e3fc329158fd001bfc08a7266a1740b23d89e5
