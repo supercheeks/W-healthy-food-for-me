@@ -62,20 +62,20 @@ while($row = $rs -> fetch()) {
 
 <script>
 $(function() {
-    on(".category .selectable", "click", function() {
-        $(".category .selectable").removeClass("selected");
-        $(".tag .selectable").removeClass("selected").hide();
-        $(".tag .selectable[data-main='"+ $(this).attr("data-idx") +"']").show();
-    });
+//    on(".category .selectable", "click", function() {
+//        $(".tag .selectable").removeClass("selected").hide();
+//        $(".tag .selectable[data-main='"+ $(this).attr("data-idx") +"']").show();
+//    });
+//    
+//    on(".selectable", "click", function() {
+//        $(this).toggleClass("selected");
+//        if($(this).hasClass("selected"))
+//            $(this).removeClass("selected");
+//        else
+//            $(this).addClass("selected");
+//    });
     
-    on(".selectable", "click", function() {
-        if($(this).hasClass("selected"))
-            $(this).removeClass("selected");
-        else
-            $(this).addClass("selected");
-    });
-    
-    $(".category .selectable").eq(0).click();
+//    $(".category .selectable").eq(0).click();
     
     var maxPrice = 100000;
     $(".price .slider").slider({

@@ -1,3 +1,5 @@
+#sub > .contents { min-height: 300px; }
+
 /* page/ranking/index.php */
 #sub.ranking { }
     /* ranking contents */
@@ -49,14 +51,14 @@
                     
                     /* product image */
                     .searchList .w100 > .list > ul > li > div.img { width: 147px; height: 147px; position: relative; border-right: 1px solid #eee; overflow: hidden;}
-                    .brand .searchList .w100 > .list > ul > li > div.img { height: 100px;}
+                    .brand .searchList .w100 > .list > ul > li > div.img { height: 120px;}
                         .searchList .w100 > .list > ul > li > div.img > span { background: #eb6363; color: white; width: 25px; height: 25px; line-height: 25px; display: inline-block; text-align: center; font-family: "SquareB"; position: absolute; top: 0; left: 0; z-index: 555;}
                         .searchList .w100 > .list > ul > li > div.img > img { width: 70%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
                         .brand .searchList .w100 > .list > ul > li > div.img > img { width: 100%;}
 
                     /* product information */
                     .searchList .w100 > .list > ul > li > div.contents { width: calc(100% - 147px); height: 147px; padding: 20px;}
-                    .brand .searchList .w100 > .list > ul > li > div.contents { height: 100px; padding: 20px;}
+                    .brand .searchList .w100 > .list > ul > li > div.contents { height: 120px; padding: 20px;}
                         .searchList .w100 > .list > ul > li > div.contents > div { display: inline-block; vertical-align: top; margin-right: -4px;}
                         .searchList .w100 > .list > ul > li > div.contents > div.left { width: 80%;}
                             .searchList .w100 > .list > ul > li > div.contents > div.left > h3 { font-size: 1.3em; line-height: 20px;}
@@ -70,7 +72,7 @@
 
                         /* product summary (like, subscribe, # of comment) */
                         .searchList .w100 > .list > ul > li > div.contents > div.right { width: 20%; text-align: center; padding: 17px 0; border-left: 1px solid #eee;}
-                        .brand .searchList .w100 > .list > ul > li > div.contents > div.right { padding: 5px 0;}
+                        .brand .searchList .w100 > .list > ul > li > div.contents > div.right { padding: 17px 0;}
                             .searchList .w100 > .list > ul > li > div.contents > div.right > p { margin: 8px 0;}
                                 .searchList .w100 > .list > ul > li > div.contents > div.right > p > * { color: #aaa;}
                                 .searchList .w100 > .list > ul > li > div.contents > div.right > p i { display: inline; }
@@ -135,62 +137,8 @@
                         #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > ul.list > li > p { margin-top: 8px; font-size: 1em; line-height: 13px; color: #777;}
                         #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > ul.list > li.active > p { color: #333;}
 
-<<<<<<< HEAD
-    #sub.rankingView > .contents .w100 > .review { padding-top: 60px; }
-        #sub.rankingView > .contents .w100 > .review > .text > h1 { font-size: 2em; font-family: SquareB; vertical-align: middle; padding-left: 10px; }
-        #sub.rankingView > .contents .w100 > .review > .text > i { color: #ffdc37; font-size: 1.5em; padding-left: 15px; padding-right: 10px; vertical-align: middle; }
-        #sub.rankingView > .contents .w100 > .review > .text > div { vertical-align: middle; font-size: 1.5em; }
-    
-        #sub.rankingView > .contents .w100 > .review > .summary { border: 1px solid #ccc; border-radius: 15px; margin-top: 10px; padding: 20px; width: 100%; }
-            #sub.rankingView > .contents .w100 > .review > .summary > div { width: 50%; }
-                #sub.rankingView > .contents .w100 > .review > .summary > div > ul > li { text-align: center; }
-                    #sub.rankingView > .contents .w100 > .review > .summary > div > ul > li > * { vertical-align: middle; }
-                    #sub.rankingView > .contents .w100 > .review > .summary > div > ul > li > h5 { font-family: SqaureB; font-size: 1.3em; padding: 7px 20px; }
-                    #sub.rankingView > .contents .w100 > .review > .summary > div > ul > li > div { background: linear-gradient(90deg, #ff5858, #fe895b); border-radius: 30px; padding: 2px 5px; width: 300px; margin-right: -4px; }
-
-#sub.rankingView > .contents .w100 > .review > .contents { padding-top: 50px; }
-    #sub.rankingView > .contents .w100 > .review > .contents > .filter { border: 1px solid #e6e6e6; background: #fafafc; width: 30%; padding: 25px; }
-        #sub.rankingView > .contents .w100 > .review > .contents > .filter > .title > i { font-size: 1.4em; padding-right: 8px; }
-        #sub.rankingView > .contents .w100 > .review > .contents > .filter > .title > span { font-size: 1.3em; font-family: SquareB; }
-        #sub.rankingView > .contents .w100 > .review > .contents > .filter > .subtitle { float: right; cursor: pointer; }
-            #sub.rankingView > .contents .w100 > .review > .contents > .filter > .subtitle > i { font-size: 1.1em; }
-            #sub.rankingView > .contents .w100 > .review > .contents > .filter > .subtitle > span { padding-left: 5px; font-size: 1.1em; }
-        #sub.rankingView > .contents .w100 > .review > .contents > .filter > .choose > ul { padding-top: 20px; }
-            #sub.rankingView > .contents .w100 > .review > .contents > .filter > .choose > ul > li > div { padding: 10px 0px; padding-top: 15px; font-size: 1.15em; }
-            #sub.rankingView > .contents .w100 > .review > .contents > .filter > .choose > ul > li > ul > li { display: inline-block; margin-right: -4px; vertical-align: middle; width: auto; padding: 7px 25px; border: 1px solid #ccc; background: white; font-size: 1.1em; margin: 5px; color: #666; border-radius: 10px; cursor: pointer; }
-            #sub.rankingView > .contents .w100 > .review > .contents > .filter > .choose > ul > li > ul > li:hover { background: #eb6363; border-color: #fafafc; transition: all .3s; color: white; }
-    #sub.rankingView > .contents .w100 > .review > .contents > .filter > div:last-child { font-size: 1.2em; margin: auto; border-radius: 10px; background: #eb6363; padding: 10px 10px; margin-top: 60px; text-align: center; color: white; width: 130px; cursor: pointer; }
-
-
-    #sub.rankingView > .contents .w100 > .review > .contents > .list { width: 70%; padding-left: 40px; }
-        #sub.rankingView > .contents .w100 > .review > .contents > .list > .title { padding-top: 20px; padding-bottom: 30px; padding-right: 10px; }
-            #sub.rankingView > .contents .w100 > .review > .contents > .list > .title > div:first-child { font-family: SquareB; font-size: 2em; vertical-align: middle; }
-            #sub.rankingView > .contents .w100 > .review > .contents > .list > .title > div:last-child { font-size: 1.1em; font-family: SquareB; vertical-align: middle; border: 1px solid #ccc; padding: 8px 25px; float: right; cursor: pointer; }
-        #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li { padding: 30px 0px; border-top: 1px solid #ccc; }
-            #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .personal > div > div:first-child { border: 1px solid #aaa; border-radius: 40px; width: 45px; height: 45px; text-align: center; background: #eee; cursor: pointer; }
-            #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .personal > div > .info { padding-left: 5px; }
-                #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .personal > div > .info > div:first-child { font-size: 1.65em; padding: 0px 10px; vertical-align: middle; cursor: pointer; }
-            #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .personal > div > .info > .star { vertical-align: middle; }
-                #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .personal > div > .info > .star > i { color: #ffdc37; vertical-align: middle; font-size: 1.2em; padding: 0px 5px; }
-                #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .personal > div > .info > .star > div { font-size: 1.15em; }
-            #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .personal > div > .info > ul { padding-top: 7px; }
-                #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .personal > div > .info > ul > li { display: inline-block; margin-right: -4px; vertical-align: middle; width: auto; border: 1px solid #ccc; border-radius: 30px; padding: 5px 10px; color: #888; margin-left: 8px; font-size: 1.08em; }
-            #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .personal > div:last-child { padding-right: 15px; float: right; color: #888; font-size: 1.2em; }
-            #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .picture > ul { padding: 15px 0px; }
-                #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .picture > ul > li { display: inline-block; margin-right: -4px; vertical-align: middle; width: auto; border: 1px solid #aaa; padding: 50px; color: #888; margin-right: 20px; }
-            #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .comment > div:first-child { font-size: 1.2em; vertical-align: middle; border-radius: 10px; background: #eb6363; padding: 5px 15px; color: white; }
-            #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .comment > div:last-child { font-size: 1.2em; vertical-align: middle; padding-left: 10px; }
-            #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .chosen { padding: 15px; }
-                #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .chosen > div { width: 50%; padding-right: 30px; }
-                    #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .chosen > div > ul > li > h5 { display: inline-block; margin-right: -4px; vertical-align: middle; width: auto; font-family: SquareB; font-size: 1.5em; padding-right: 20px; }
-                    #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .chosen > div > ul > li > ul { display: inline-block; margin-right: -4px; vertical-align: middle; width: auto;}
-                    #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .chosen > div > ul > li > ul > li { display: inline-block; margin-right: -4px; vertical-align: middle; width: auto; border-radius: 40px; border: 1px solid #888; width: 30px; height: 30px; margin-right: 10px; margin-bottom: 8px; text-align: center; line-height: 30px; }
-                    #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .chosen > div > ul > li > ul > li:nth-child(2) { background: #eb6363; color: white; border: none; }
-
-
-=======
 .review { margin-top: 50px; }
-.review h4 { font-size: 1.6em; font-family: "SquareB";}
+.review h4 { font-size: 1.8em; font-family: "SquareB";}
     .review > div {}
     .review > .left { width: 300px; margin-right: calc(4% - 4px); background: #fafafa; border: 1px solid #ddd; padding: 30px 20px;}
         .review > .left > div {}
@@ -250,7 +198,6 @@
                             .review > .right > div.reviewList > ul > li > p span { background: #eb6363; color: white; padding: 5px 10px; border-radius: 3px; font-size: 0.9em; border: 1px solid #e56161; margin-right: 5px;}
                         .review > .right > div.reviewList > ul > li > .reviewRating {}
                         .review > .right > div.reviewList > ul > li.naver {}
->>>>>>> ad3d3cf1f355d368d7011a1d49805b994153142d
 
 /* page/event/index.php */
 #sub.ranking > .contents .w100 > .list { padding-top: 30px; }
@@ -264,7 +211,7 @@
 #sub.ranking > .contents .w100 > .list > .item > div:last-child > div { float: right; vertical-align: middle; padding-right: 5px; font-size: 0.97em; }
 
 /* page/brand/index.php */
-#sub.brand > .searchList .w100 > .list > ul > li > .contents > .left > .detail { font-size: 0.8em; color: #999; padding-top: 5px; margin-bottom: -4px; }
+#sub.brand > .searchList .w100 > .list > ul > li > .contents > .left > .detail { font-size: 0.9em; color: #999; margin-top: 10px;}
 
 /* page/board/index.php */
 #sub.community > .contents .w100 > .list { width: 25%; margin-right: -4px; }
@@ -310,3 +257,32 @@
 #sub.community > .contents .w100 > .board > .write > form > ul > li:last-child { border-bottom: 1px solid #eb6363; margin-bottom: 20px; }
 #sub.community > .contents .w100 > .board > .write > form > button { width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; cursor: pointer; float: right; padding: 7px 15px; border-radius: 20px; }
 #sub.community > .contents .w100 > .board > .write > a { width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; cursor: pointer; float: right; padding: 7px 15px; border-radius: 20px; margin-right: 10px; }
+
+.button { width: auto; min-width:120px; text-align: center; padding: 12px 30px; border-radius: 100px; border: 1px solid #ddd; display: inline-block;}
+.button-red { color: #eb6363 !important; border-color: #eb6363;}
+
+#sub.login { }
+    #sub.login > .contents { }
+        #sub.login > .contents .w100 { width: 950px; height: 500px; position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%); box-shadow: 0px 0px 20px rgba(0,0,0,0.3);}
+            #sub.login > .contents .w100 > div { height: 100%;}
+            #sub.login > .contents .w100 > .left { width: 35%; background: #333; text-align: center; position: relative;}
+                #sub.login > .contents .w100 > .left * { color: white;}
+                #sub.login > .contents .w100 > .left > .contents { position: absolute; width: 100%; padding: 30px; top: 50%; left: 0; transform: translate(0, -50%);}
+                    #sub.login > .contents .w100 > .left > .contents > h2 { font-size: 1.6em; margin-bottom: 20px;}
+                        #sub.login > .contents .w100 > .left > .contents > h2 span { color: #eb6363; }
+                    #sub.login > .contents .w100 > .left > .contents > p { letter-spacing: 0.3px; line-height: 16px; margin-bottom: 50px; }
+                    #sub.login > .contents .w100 > .left > .contents > .account { }
+                        #sub.login > .contents .w100 > .left > .contents > .account p { opacity: 0.5; margin-bottom: 10px; }
+                        #sub.login > .contents .w100 > .left > .contents > .account a { }
+            #sub.login > .contents .w100 > .right { width: 65%; background: white; }
+                #sub.login > .contents .w100 > .right > h2 { }
+                #sub.login > .contents .w100 > .right > form { }
+                    #sub.login > .contents .w100 > .right > form > ul { }
+                        #sub.login > .contents .w100 > .right > form > ul > li { }
+                            #sub.login > .contents .w100 > .right > form > ul > li label { }
+                            #sub.login > .contents .w100 > .right > form > ul > li input { }
+                            #sub.login > .contents .w100 > .right > form > ul > li a { }
+                #sub.login > .contents .w100 > .right > .socialAPI { }
+                    #sub.login > .contents .w100 > .right > .socialAPI > p { }
+                    #sub.login > .contents .w100 > .right > .socialAPI > ul { }
+                        #sub.login > .contents .w100 > .right > .socialAPI > ul > li { }
