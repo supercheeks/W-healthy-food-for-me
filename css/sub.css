@@ -188,7 +188,6 @@
                     #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .chosen > div > ul > li > ul > li:nth-child(2) { background: #eb6363; color: white; border: none; }
 
 
-=======
 .review { margin-top: 50px; }
 .review h4 { font-size: 1.6em; font-family: "SquareB";}
     .review > div {}
@@ -250,7 +249,6 @@
                             .review > .right > div.reviewList > ul > li > p span { background: #eb6363; color: white; padding: 5px 10px; border-radius: 3px; font-size: 0.9em; border: 1px solid #e56161; margin-right: 5px;}
                         .review > .right > div.reviewList > ul > li > .reviewRating {}
                         .review > .right > div.reviewList > ul > li.naver {}
->>>>>>> ad3d3cf1f355d368d7011a1d49805b994153142d
 
 /* page/event/index.php */
 #sub.ranking > .contents .w100 > .list { padding-top: 30px; }
@@ -268,8 +266,8 @@
 
 /* page/board/index.php */
 #sub.community > .contents .w100 > .list { width: 25%; margin-right: -4px; }
-#sub.community > .contents .w100 > .list > h3 { font-family: SquareB; font-size: 2em; text-align: left; color: #666; padding-bottom: 30px; padding-left: 10px; }
-#sub.community > .contents .w100 > .list > ul > li { border: 1px solid #ccc; padding: 15px; font-size: 0.97em; background: #fff; cursor: pointer; }
+#sub.community > .contents .w100 > .list > h3 { font-family: SquareB; font-size: 2.1em; text-align: left; color: #666; padding-bottom: 30px; padding-left: 10px; }
+#sub.community > .contents .w100 > .list > ul > li { border: 1px solid #ccc; padding: 15px; background: #fff; cursor: pointer; }
 #sub.community > .contents .w100 > .list > ul > li:first-child { border-bottom: none; }
 #sub.community > .contents .w100 > .list > ul > li > div, i { vertical-align: middle; color: #555; }
 #sub.community > .contents .w100 > .list > ul > li > i { float: right; }
@@ -278,19 +276,21 @@
 
 
 #sub.community > .contents .w100 > .board { width: 75%; margin-right: -4px; padding-left: 30px; }
-#sub.community > .contents .w100 > .board > h5 { font-size: 1.8em; font-family: SquareB; color: #555; padding-right: 15px; vertical-align: bottom; }
-#sub.community > .contents .w100 > .board > div { color: #999; font-size: 0.9em; vertical-align: bottom; }
+#sub.community > .contents .w100 > .board > h5 { font-size: 1.9em; font-family: SquareB; color: #555; padding-right: 15px; vertical-align: bottom; }
+#sub.community > .contents .w100 > .board > div { color: #999; vertical-align: bottom; }
 #sub.community > .contents .w100 > .board > table { margin-top: 33px; border-collapse: collapse; width: 100%; margin-bottom: 15px; }
-#sub.community > .contents .w100 > .board > table th { border-top: 2px solid #eb6363; border-bottom: 1px solid #ccc; text-align: center; line-height: 50px; width: 5%; }
+#sub.community > .contents .w100 > .board > table th { border-top: 2px solid #eb6363; border-bottom: 1px solid #ccc; text-align: center; line-height: 50px; width: 5%; font-size: 1.1em; }
 #sub.community > .contents .w100 > .board > table th:nth-child(2) { width: 30%; }
 #sub.community > .contents .w100 > .board > table td { border-bottom: 1px solid #ccc; width: 100px; text-align: center; line-height: 35px; }
 #sub.community > .contents .w100 > .board > table td:nth-child(2) { text-align: left; }
-#sub.community > .contents .w100 > .board > a {  }
-#sub.community > .contents .w100 > .board > a:last-child { float: right; border: 1px solid #eb6363; background: #eb6363; color: white; width: auto; padding: 10px 20px; border-radius: ; font-size: 0.9em; }
+#sub.community > .contents .w100 > .board > div { text-align: center; padding-top: 10px; }
+#sub.community > .contents .w100 > .board > div > a { border: 1px solid #eb6363; width: 25px; height: 25px; margin: 0px 3px; text-align: center; line-height: 25px; }
+#sub.community > .contents .w100 > .board > div > a:nth-child(3) { background: #eb6363; color: white; }
+#sub.community > .contents .w100 > .board > a { float: right; background: #eb6363; border: 1px solid #eb6363; color: white; width: auto; padding: 10px 20px; }
 
 /* page/board/view.php */
 #sub.community > .contents .w100 > .view > .title { padding-bottom: 30px; }
-#sub.community > .contents .w100 > .view > .title > h5 { font-size: 1.8em; font-family: SquareB; color: #555; padding-right: 15px; vertical-align: bottom; }
+#sub.community > .contents .w100 > .view > .title > h5 { font-size: 1.9em; font-family: SquareB; color: #555; padding-right: 15px; vertical-align: bottom; }
 #sub.community > .contents .w100 > .view > .title > div { color: #999; font-size: 0.9em; vertical-align: bottom; }
 #sub.community > .contents .w100 > .view { width: 75%; margin-right: -4px; padding-left: 30px; }
 #sub.community > .contents .w100 > .view > div:nth-child(2) > div { width: 100%; border-bottom: 1px solid #F7F5F8; }
@@ -300,13 +300,31 @@
 #sub.community > .contents .w100 > .view > div:nth-child(2) > .view { width: 50%; }
 #sub.community > .contents .w100 > .view > div:nth-child(2) > .title { border-top: 2px solid #eb6363; margin-top: 4px; }
 #sub.community > .contents .w100 > .view > div:nth-child(2) > div:last-child { padding: 5px; min-height: 200px; border-bottom: 1px solid #eb6363; margin-bottom: 20px; line-height: 20px; white-space: pre-line; font-size: 1.1em; }
-#sub.community > .contents .w100 > .view > a { width: auto; background: #eb6363; border-radius: 20px; color: white; float: right; cursor: pointer; padding: 7px 15px; border: 1px solid #eb6363; margin-left: 10px;}
+#sub.community > .contents .w100 > .view > a { width: auto; background: #eb6363; color: white; float: right; cursor: pointer; padding: 8px 18px; border: 1px solid #eb6363; margin-left: 10px;}
+
+#sub.community > .contents .w100 > .view > div.comments { padding-top: 50px; }
+#sub.community > .contents .w100 > .view > div.comments > div:first-child { font-family: SquareB; font-size: 1.2em; color: #555; padding-bottom: 5px; }
+#sub.community > .contents .w100 > .view > div.comments > div:nth-child(2) > textarea { min-height: 80px; padding: 7px; border-radius: 10px; }
+#sub.community > .contents .w100 > .view > div.comments > div:nth-child(2) > button { float: right; width: 50px; padding: 5px 0px; border: 1px solid #eb6363; border-radius: 10px; color: white; background: #eb6363; margin-top: 5px; cursor: pointer; }
+#sub.community > .contents .w100 > .view > div.comments > ul { padding-top: 20px; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li { padding: 20px 0px; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div:first-child { width: 7%; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div:first-child > div.image { border: 1px solid #aaa; background: #ccc; border-radius: 40px; width: 45px; height: 45px; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents { padding: 5px 10px; width: 93%; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > div.name { font-size: 1.5em; font-family: SquareB; padding-right: 10px; vertical-align: middle; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > ul.tag { vertical-align: middle; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > .text { min-height: 60px; border: 1px solid #aaa; border-radius: 10px;  padding: 8px; font-size: 1.2em; margin: 10px 0px; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > div:last-child { text-align: right; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > div:last-child > a { font-size: 1.1em; padding: 5px; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > div:last-child > a:hover { text-decoration-line: underline; transition: all .3s; }
+
+#sub.community > .contents .w100 > .view > div.comments > ul > li > .subcomment { width: 93%; float: right; }
 
 /* page/board/write.php */
 #sub.community > .contents .w100 > .board > .write { margin-top: 30px; padding-top: 20px; border-top: 2px solid #eb6363; }
-#sub.community > .contents .w100 > .board > .write > form > ul > li { font-size: 1.5em; font-family: SquareB; padding: 5px 5px; } 
+#sub.community > .contents .w100 > .board > .write > form > ul > li { font-size: 1.5em; font-family: SquareB; padding: 5px 5px; text-align: left; } 
 #sub.community > .contents .w100 > .board > .write > form > ul > li > input { font-size: 0.8em; padding: 5px; order: 1px solid #ccc; margin: 10px 0px; }
 #sub.community > .contents .w100 > .board > .write > form > ul > li:last-child > textarea { font-size: 0.8em; margin: 10px 0px; padding: 5px; height: 200px; }
 #sub.community > .contents .w100 > .board > .write > form > ul > li:last-child { border-bottom: 1px solid #eb6363; margin-bottom: 20px; }
-#sub.community > .contents .w100 > .board > .write > form > button { width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; cursor: pointer; float: right; padding: 7px 15px; border-radius: 20px; }
-#sub.community > .contents .w100 > .board > .write > a { width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; cursor: pointer; float: right; padding: 7px 15px; border-radius: 20px; margin-right: 10px; }
+#sub.community > .contents .w100 > .board > .write > form > button { width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; float: right; padding: 10px 25px; }
+#sub.community > .contents .w100 > .board > .write > form > a { width: auto; height: auto; background: #eb6363; border: 1px solid #eb6363; color: white; float: right; padding: 10px 25px; margin-right: 10px; }

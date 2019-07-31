@@ -34,8 +34,8 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                             <li>내용 <textarea name="contents" placeholder="내용을 입력하세요" required></textarea></li>
                         </ul>
                         <button type="submit">작성</button>
+                        <a href="/page/board/index.php">목록</a>
                     </form>
-                    <a href="/page/board/index.php">목록</a>
                 </div>
             </div>
         </div>

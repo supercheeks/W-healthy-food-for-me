@@ -60,6 +60,59 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                 <a href="/page/board/index.php" class="inlineBlock">목록</a>
                 <a href="#" class="inlineBlock">수정</a>
                 <a href="/page/board/delete.php?idx=<?php echo $row['idx']; ?>" class="inlineBlock">삭제</a>
+                <div class="comments">
+                   <?php 
+                    $sql = " select count(*) from comment where post=?";
+                    $totals = $pdo -> prepare($sql);
+                    $totals -> execute(array($idx));
+                    $total = $totals -> fetchColumn();
+                    ?>
+                    <div>Comments <?php echo $total ?>개</div>
+                    <div>
+                        <textarea type="text" placeholder="댓글달기" required></textarea>
+                        <button>작성</button>
+                    </div>
+                    <ul>
+                        <li>
+                            <div>
+                                <div class=inlineBlock>
+                                <div class="image">&nbsp;</div>
+                                </div>
+                                <div class="contents inlineBlock">
+                                    <div class="name inlineBlock">Name</div>
+                                    <ul class="tag inlineBlock">
+                                        <li class="tagWhite inlineBlock">직장인</li>
+                                        <li class="tagWhite inlineBlock">30대 초반</li>
+                                        <li class="tagWhite inlineBlock">여성</li>
+                                    </ul>
+                                    <div class="text">contents</div>
+                                    <div>
+                                        <a href="#" class="inlineBlock">수정</a>
+                                        <a href="#" class="inlineBlock">삭제</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subcomment">
+                                <div class=inlineBlock>
+                                    <div class="image">&nbsp;</div>
+                                </div>
+                                <div class="contents inlineBlock">
+                                    <div class="name inlineBlock">Name</div>
+                                    <ul class="tag inlineBlock">
+                                        <li class="tagWhite inlineBlock">직장인</li>
+                                        <li class="tagWhite inlineBlock">30대 초반</li>
+                                        <li class="tagWhite inlineBlock">여성</li>
+                                    </ul>
+                                    <div class="text">contents</div>
+                                    <div>
+                                        <a href="#" class="inlineBlock">수정</a>
+                                        <a href="#" class="inlineBlock">삭제</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
