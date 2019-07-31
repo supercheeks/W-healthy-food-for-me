@@ -14,8 +14,11 @@ html, body { height: 100%; min-height: 100%;}
 
 .naver_link { background: #21cb01; color: white; padding: 8px 15px; border-radius: 5px; border: 1px solid #1ebf00; transition: all .3s; }
 .naver_link:hover { border-color: #21cb01; color: #1ebf00; background: white;}
+<<<<<<< HEAD
 .naver_link_white { border: 1px solid #21cb01; color: #1ebf00; background: white; padding: 8px 15px; border-radius: 5px; transition: all .3s;}
 .naver_link_white:hover { background: #21cb01; color: white; }
+=======
+>>>>>>> ad3d3cf1f355d368d7011a1d49805b994153142d
 
 /* font */
 .font_EB { font-family: "SquareEB";}
