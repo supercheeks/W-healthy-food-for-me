@@ -43,11 +43,11 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                         $totals = $pdo -> prepare($sql);
                         $totals -> execute();
                         $total = $totals -> fetchColumn();
-                        $currPage = (isset($_GET['page']))?$_GET['page']:0;
+                        $page = (isset($_GET['page'])) ? $_GET['page'] : 0;
                         $cnt = 10;
-                        $totalPage= $total/$cnt;
+                        $totalPage = $total / $cnt;
                         
-                        $sql = " select * from board order by wdate desc limit ".(($currPage)*$cnt).", ".$cnt;
+                        $sql = " select * from board order by wdate desc limit ".(($page)*$cnt).", ".$cnt;
                     
                         $rs = $pdo->prepare($sql);
                         $rs -> execute();
@@ -64,15 +64,19 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                         }?>
                     </tbody>
                 </table>
-                <?php 
-                $pageCut = 5;
-                $start = ($currPage/$pageCut);
-                for($i=($start*$pageCut)+1; $i <= ($start * $pageCut)+$pageCut; $i++){
-                ?>
+            <?php 
+            $pageCnt = 5;
+
+            $start = floor(($page - 1) / $pageCnt);
+            $start = ($start < 0) ? 0 : $start;
+            $start = $start * $pageCnt + 1;
+
+            for($i = $start; $i < $start + $pageCnt; $i++){
+            ?>
                 <a href="/page/board/index.php?page=<?php echo $i; ?>" class="inlineBlock"><?php echo $i; ?></a>
-                <?php 
-                }
-                ?>
+            <?php 
+            }
+            ?>
                 <a href="/page/board/write.php">글쓰기</a>
             </div>
         </div>
