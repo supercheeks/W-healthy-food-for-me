@@ -25,7 +25,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                 </ul>
             </div>
             <div class="board inlineBlock">
-                <h5 class="inlineBlock">게시판 이름</h5>
+                <h5 class="inlineBlock">자유게시판</h5>
                 <div class="inlineBlock">게시판 설명 게시판 설명 게시판 설명</div>
                 <div class="write">
                     <form action="/page/board/save.php" method="post">
@@ -35,6 +35,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                         </ul>
                         <button type="submit">작성</button>
                     </form>
+                    <a href="/page/board/index.php">목록</a>
                 </div>
             </div>
         </div>
