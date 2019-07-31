@@ -11,7 +11,50 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
     </div>
     <div class="contents">
         <div class="w100">
-            
+           <div class="list">
+               <div class="item inlineBlock">
+                    <div>image</div>
+                    <div>
+                        <h5 class="inlineBlock">제품 평가단 모집</h5>
+                        <div class="inlineBlock">2019-07-29</div>
+                    </div>    
+                </div>
+                <div class="item inlineBlock">
+                    <div>image</div>
+                    <div>
+                        <h5 class="inlineBlock">제품 평가단 모집</h5>
+                        <div class="inlineBlock">2019-07-29</div>
+                    </div>    
+                </div>
+                <div class="item inlineBlock">
+                    <div>image</div>
+                    <div>
+                        <h5 class="inlineBlock">제품 평가단 모집</h5>
+                        <div class="inlineBlock">2019-07-29</div>
+                    </div>    
+                </div>
+                <div class="item inlineBlock">
+                    <div>image</div>
+                    <div>
+                        <h5 class="inlineBlock">제품 평가단 모집</h5>
+                        <div class="inlineBlock">2019-07-29</div>
+                    </div>    
+                </div>
+                <div class="item inlineBlock">
+                    <div>image</div>
+                    <div>
+                        <h5 class="inlineBlock">제품 평가단 모집</h5>
+                        <div class="inlineBlock">2019-07-29</div>
+                    </div>    
+                </div>
+                <div class="item inlineBlock">
+                    <div>image</div>
+                    <div>
+                        <h5 class="inlineBlock">제품 평가단 모집</h5>
+                        <div class="inlineBlock">2019-07-29</div>
+                    </div>    
+                </div>
+           </div>
         </div>
     </div>
 </section>
