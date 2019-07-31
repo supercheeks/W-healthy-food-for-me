@@ -389,11 +389,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                                 
                                 <div class="ref">
                                     네이버 블로그에서 작성 된 글입니다.
-<<<<<<< HEAD
                                     <a href="#" class="naver_link_white">출처 바로가기</a>
-=======
-                                    <a href="#" class="naver_link">출처 바로가기</a>
->>>>>>> ad3d3cf1f355d368d7011a1d49805b994153142d
                                 </div>
                             </li>
                             <li>
