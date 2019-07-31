@@ -58,7 +58,7 @@ section#main > .contents > .submit a { padding: 12px 30px; border-radius: 100px;
 /*.search, .category, .price, .tag { opacity: 0; padding-top: 100px; }*/
 
 /* footer */
-footer {}
+footer { border-top: 1px solid #ddd;}
     /* footer main contents*/
     footer .w100 {}
         /* logo and main menu*/
