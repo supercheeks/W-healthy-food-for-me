@@ -308,3 +308,4 @@
 #sub.community > .contents .w100 > .board > .write > form > ul > li:last-child > textarea { font-size: 0.8em; margin: 10px 0px; padding: 5px; height: 200px; }
 #sub.community > .contents .w100 > .board > .write > form > ul > li:last-child { border-bottom: 1px solid #eb6363; margin-bottom: 20px; }
 #sub.community > .contents .w100 > .board > .write > form > button { width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; cursor: pointer; float: right; padding: 7px 15px; border-radius: 20px; }
+#sub.community > .contents .w100 > .board > .write > a { width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; cursor: pointer; float: right; padding: 7px 15px; border-radius: 20px; margin-right: 10px; }

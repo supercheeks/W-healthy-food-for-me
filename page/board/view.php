@@ -26,7 +26,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
             </div>
             <div class="view inlineBlock">
                <div class="title">
-                    <h5 class="inlineBlock">게시판 이름</h5>
+                    <h5 class="inlineBlock">자유게시판</h5>
                     <div class="inlineBlock">게시판 설명 게시판 설명 게시판 설명</div>
                </div>
                 <?php 
