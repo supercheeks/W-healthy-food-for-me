@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jqueryui/external/jquery/jquery.js"></script>
+</head>
+<body>
+<pre class="result">{"result":</pre>
+<script>
+$(function() {
+    $(".result").append("");
+    for(var i = 1; i <= 25; i++) {
+        var startIdx = ((i - 1) * 1000) + 1;
+        var endIdx = startIdx + 999;
+        
+        $.getJSON("/product/product_"+startIdx+"_"+endIdx+".json", function(data) {
+            var row = data["I0030"].row;
+            $(row).each(function(e, el) {
+                var name = el.PRDLST_NM;
+                var brand = el.BSSH_NM;
+                var intakeMethod = el.NTK_MTHD;
+                var func = el.PRIMARY_FNCLTY;
+                var metName = el.RAWMTRL_NM;
+
+                var temp = {
+                    "name": name,
+                    "brand": brand,
+                    "intakeMethod": intakeMethod,
+                    "func": func,
+                    "metName": metName
+                };
+                
+                $(".result").append(JSON.stringify(temp));
+                if(i != 25) $(".result").append(",");
+            });
+        });
+        
+        if(i == 25) $(".result").append("}");
+    }
+    
+//    result = JSON.stringify(result);
+//    
+//    var dataUri = "data:application/json;charset=utf-8,"+ encodeURIComponent(result);
+//    var a = document.createElement("a");
+//    a.href = dataUri;
+//    a.click();
+});    
+</script>    
+</body>
+</html>
