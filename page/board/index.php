@@ -43,11 +43,11 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                         $totals = $pdo -> prepare($sql);
                         $totals -> execute();
                         $total = $totals -> fetchColumn();
-                        $page = (isset($_GET['page'])) ? $_GET['page'] : 0;
+                        $page = (isset($_GET['page'])) ? $_GET['page'] : 1;
                         $cnt = 10;
                         $totalPage = $total / $cnt;
                         
-                        $sql = " select * from board order by wdate desc limit ".(($page)*$cnt).", ".$cnt;
+                        $sql = " select * from board order by wdate desc limit ".(($page - 1)*$cnt).", ".$cnt;
                     
                         $rs = $pdo->prepare($sql);
                         $rs -> execute();

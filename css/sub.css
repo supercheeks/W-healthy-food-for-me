@@ -307,23 +307,27 @@
 #sub.community > .contents .w100 > .view > div:nth-child(2) > div:last-child { padding: 5px; min-height: 200px; border-bottom: 1px solid #eb6363; margin-bottom: 20px; line-height: 20px; white-space: pre-line; font-size: 1.1em; }
 #sub.community > .contents .w100 > .view > a { width: auto; background: #eb6363; color: white; float: right; cursor: pointer; padding: 8px 18px; border: 1px solid #eb6363; margin-left: 10px;}
 
-#sub.community > .contents .w100 > .view > div.comments { padding-top: 50px; }
+#sub.community > .contents .w100 > .view > div.comments { padding-top: 50px; padding-bottom: 20px; }
 #sub.community > .contents .w100 > .view > div.comments > div:first-child { font-family: SquareB; font-size: 1.2em; color: #555; padding-bottom: 5px; }
-#sub.community > .contents .w100 > .view > div.comments > div:nth-child(2) > textarea { min-height: 80px; padding: 7px; border-radius: 10px; }
-#sub.community > .contents .w100 > .view > div.comments > div:nth-child(2) > button { float: right; width: 50px; padding: 5px 0px; border: 1px solid #eb6363; border-radius: 10px; color: white; background: #eb6363; margin-top: 5px; cursor: pointer; }
+#sub.community > .contents .w100 > .view > div.comments > div:nth-child(2) > form > textarea { min-height: 80px; padding: 7px; border-radius: 10px; }
+#sub.community > .contents .w100 > .view > div.comments > div:nth-child(2) > form > button { float: right; width: 50px; padding: 5px 0px; border: 1px solid #eb6363; border-radius: 10px; color: white; background: #eb6363; margin-top: 5px; cursor: pointer; }
 #sub.community > .contents .w100 > .view > div.comments > ul { padding-top: 20px; }
-#sub.community > .contents .w100 > .view > div.comments > ul > li { padding: 20px 0px; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li { padding: 15px 0px; border-bottom: 1px solid #ccc}
+#sub.community > .contents .w100 > .view > div.comments > ul > li:last-child { border: none; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div.writeSubreply { padding-top: 10px; padding-left: 65px; padding-right: 10px; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div.writeSubreply > form > textarea { min-height: 50px; padding: 7px; border-radius: 10px; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div.writeSubreply > form > button { float: right; width: 50px; padding: 5px 0px; border: 1px solid #eb6363; border-radius: 10px; color: white; background: #eb6363; margin-top: 5px; cursor: pointer; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div.subcomment { border-left: 1px solid #ccc; padding-left: 40px; }
 #sub.community > .contents .w100 > .view > div.comments > ul > li > div > div:first-child { width: 7%; }
 #sub.community > .contents .w100 > .view > div.comments > ul > li > div > div:first-child > div.image { border: 1px solid #aaa; background: #ccc; border-radius: 40px; width: 45px; height: 45px; }
-#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents { padding: 5px 10px; width: 93%; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents { padding: 0px 10px; width: 93%; }
 #sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > div.name { font-size: 1.5em; font-family: SquareB; padding-right: 10px; vertical-align: middle; }
-#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > ul.tag { vertical-align: middle; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > ul { vertical-align: middle; }
 #sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > .text { min-height: 60px; border: 1px solid #aaa; border-radius: 10px;  padding: 8px; font-size: 1.2em; margin: 10px 0px; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > .date { float: right; }
 #sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > div:last-child { text-align: right; }
 #sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > div:last-child > a { font-size: 1.1em; padding: 5px; }
 #sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > div:last-child > a:hover { text-decoration-line: underline; transition: all .3s; }
-
-#sub.community > .contents .w100 > .view > div.comments > ul > li > .subcomment { width: 93%; float: right; }
 
 /* page/board/write.php */
 #sub.community > .contents .w100 > .board > .write { margin-top: 30px; padding-top: 20px; border-top: 2px solid #eb6363; }
@@ -334,7 +338,7 @@
 <<<<<<< HEAD
 #sub.community > .contents .w100 > .board > .write > form > button { width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; float: right; padding: 10px 25px; }
 #sub.community > .contents .w100 > .board > .write > form > a { width: auto; height: auto; background: #eb6363; border: 1px solid #eb6363; color: white; float: right; padding: 10px 25px; margin-right: 10px; }
-=======
+
 #sub.community > .contents .w100 > .board > .write > form > button { width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; cursor: pointer; float: right; padding: 7px 15px; border-radius: 20px; }
 #sub.community > .contents .w100 > .board > .write > a { width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; cursor: pointer; float: right; padding: 7px 15px; border-radius: 20px; margin-right: 10px; }
 
@@ -366,4 +370,3 @@
                     #sub.login > .contents .w100 > .right > .socialAPI > p { }
                     #sub.login > .contents .w100 > .right > .socialAPI > ul { }
                         #sub.login > .contents .w100 > .right > .socialAPI > ul > li { }
->>>>>>> 30e3fc329158fd001bfc08a7266a1740b23d89e5
