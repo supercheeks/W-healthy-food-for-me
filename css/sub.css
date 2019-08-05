@@ -137,6 +137,62 @@
                         #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > ul.list > li > p { margin-top: 8px; font-size: 1em; line-height: 13px; color: #777;}
                         #sub.rankingView > .contents .w100 > .summary > div.right > .info > li > ul.list > li.active > p { color: #333;}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    #sub.rankingView > .contents .w100 > .review { padding-top: 60px; }
+        #sub.rankingView > .contents .w100 > .review > .text > h1 { font-size: 2em; font-family: SquareB; vertical-align: middle; padding-left: 10px; }
+        #sub.rankingView > .contents .w100 > .review > .text > i { color: #ffdc37; font-size: 1.5em; padding-left: 15px; padding-right: 10px; vertical-align: middle; }
+        #sub.rankingView > .contents .w100 > .review > .text > div { vertical-align: middle; font-size: 1.5em; }
+    
+        #sub.rankingView > .contents .w100 > .review > .summary { border: 1px solid #ccc; border-radius: 15px; margin-top: 10px; padding: 20px; width: 100%; }
+            #sub.rankingView > .contents .w100 > .review > .summary > div { width: 50%; }
+                #sub.rankingView > .contents .w100 > .review > .summary > div > ul > li { text-align: center; }
+                    #sub.rankingView > .contents .w100 > .review > .summary > div > ul > li > * { vertical-align: middle; }
+                    #sub.rankingView > .contents .w100 > .review > .summary > div > ul > li > h5 { font-family: SqaureB; font-size: 1.3em; padding: 7px 20px; }
+                    #sub.rankingView > .contents .w100 > .review > .summary > div > ul > li > div { background: linear-gradient(90deg, #ff5858, #fe895b); border-radius: 30px; padding: 2px 5px; width: 300px; margin-right: -4px; }
+
+#sub.rankingView > .contents .w100 > .review > .contents { padding-top: 50px; }
+    #sub.rankingView > .contents .w100 > .review > .contents > .filter { border: 1px solid #e6e6e6; background: #fafafc; width: 30%; padding: 25px; }
+        #sub.rankingView > .contents .w100 > .review > .contents > .filter > .title > i { font-size: 1.4em; padding-right: 8px; }
+        #sub.rankingView > .contents .w100 > .review > .contents > .filter > .title > span { font-size: 1.3em; font-family: SquareB; }
+        #sub.rankingView > .contents .w100 > .review > .contents > .filter > .subtitle { float: right; cursor: pointer; }
+            #sub.rankingView > .contents .w100 > .review > .contents > .filter > .subtitle > i { font-size: 1.1em; }
+            #sub.rankingView > .contents .w100 > .review > .contents > .filter > .subtitle > span { padding-left: 5px; font-size: 1.1em; }
+        #sub.rankingView > .contents .w100 > .review > .contents > .filter > .choose > ul { padding-top: 20px; }
+            #sub.rankingView > .contents .w100 > .review > .contents > .filter > .choose > ul > li > div { padding: 10px 0px; padding-top: 15px; font-size: 1.15em; }
+            #sub.rankingView > .contents .w100 > .review > .contents > .filter > .choose > ul > li > ul > li { display: inline-block; margin-right: -4px; vertical-align: middle; width: auto; padding: 7px 25px; border: 1px solid #ccc; background: white; font-size: 1.1em; margin: 5px; color: #666; border-radius: 10px; cursor: pointer; }
+            #sub.rankingView > .contents .w100 > .review > .contents > .filter > .choose > ul > li > ul > li:hover { background: #eb6363; border-color: #fafafc; transition: all .3s; color: white; }
+    #sub.rankingView > .contents .w100 > .review > .contents > .filter > div:last-child { font-size: 1.2em; margin: auto; border-radius: 10px; background: #eb6363; padding: 10px 10px; margin-top: 60px; text-align: center; color: white; width: 130px; cursor: pointer; }
+
+
+    #sub.rankingView > .contents .w100 > .review > .contents > .list { width: 70%; padding-left: 40px; }
+        #sub.rankingView > .contents .w100 > .review > .contents > .list > .title { padding-top: 20px; padding-bottom: 30px; padding-right: 10px; }
+            #sub.rankingView > .contents .w100 > .review > .contents > .list > .title > div:first-child { font-family: SquareB; font-size: 2em; vertical-align: middle; }
+            #sub.rankingView > .contents .w100 > .review > .contents > .list > .title > div:last-child { font-size: 1.1em; font-family: SquareB; vertical-align: middle; border: 1px solid #ccc; padding: 8px 25px; float: right; cursor: pointer; }
+        #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li { padding: 30px 0px; border-top: 1px solid #ccc; }
+            #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .personal > div > div:first-child { border: 1px solid #aaa; border-radius: 40px; width: 45px; height: 45px; text-align: center; background: #eee; cursor: pointer; }
+            #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .personal > div > .info { padding-left: 5px; }
+                #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .personal > div > .info > div:first-child { font-size: 1.65em; padding: 0px 10px; vertical-align: middle; cursor: pointer; }
+            #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .personal > div > .info > .star { vertical-align: middle; }
+                #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .personal > div > .info > .star > i { color: #ffdc37; vertical-align: middle; font-size: 1.2em; padding: 0px 5px; }
+                #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .personal > div > .info > .star > div { font-size: 1.15em; }
+            #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .personal > div > .info > ul { padding-top: 7px; }
+                #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .personal > div > .info > ul > li { display: inline-block; margin-right: -4px; vertical-align: middle; width: auto; border: 1px solid #ccc; border-radius: 30px; padding: 5px 10px; color: #888; margin-left: 8px; font-size: 1.08em; }
+            #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .personal > div:last-child { padding-right: 15px; float: right; color: #888; font-size: 1.2em; }
+            #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .picture > ul { padding: 15px 0px; }
+                #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .picture > ul > li { display: inline-block; margin-right: -4px; vertical-align: middle; width: auto; border: 1px solid #aaa; padding: 50px; color: #888; margin-right: 20px; }
+            #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .comment > div:first-child { font-size: 1.2em; vertical-align: middle; border-radius: 10px; background: #eb6363; padding: 5px 15px; color: white; }
+            #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .comment > div:last-child { font-size: 1.2em; vertical-align: middle; padding-left: 10px; }
+            #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .chosen { padding: 15px; }
+                #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .chosen > div { width: 50%; padding-right: 30px; }
+                    #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .chosen > div > ul > li > h5 { display: inline-block; margin-right: -4px; vertical-align: middle; width: auto; font-family: SquareB; font-size: 1.5em; padding-right: 20px; }
+                    #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .chosen > div > ul > li > ul { display: inline-block; margin-right: -4px; vertical-align: middle; width: auto;}
+                    #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .chosen > div > ul > li > ul > li { display: inline-block; margin-right: -4px; vertical-align: middle; width: auto; border-radius: 40px; border: 1px solid #888; width: 30px; height: 30px; margin-right: 10px; margin-bottom: 8px; text-align: center; line-height: 30px; }
+                    #sub.rankingView > .contents .w100 > .review > .contents > .list > .contents > ul > li > .chosen > div > ul > li > ul > li:nth-child(2) { background: #eb6363; color: white; border: none; }
+
+
+=======
+>>>>>>> 30e3fc329158fd001bfc08a7266a1740b23d89e5
 .review { margin-top: 50px; }
 .review h4 { font-size: 1.8em; font-family: "SquareB";}
     .review > div {}
@@ -215,8 +271,8 @@
 
 /* page/board/index.php */
 #sub.community > .contents .w100 > .list { width: 25%; margin-right: -4px; }
-#sub.community > .contents .w100 > .list > h3 { font-family: SquareB; font-size: 2em; text-align: left; color: #666; padding-bottom: 30px; padding-left: 10px; }
-#sub.community > .contents .w100 > .list > ul > li { border: 1px solid #ccc; padding: 15px; font-size: 0.97em; background: #fff; cursor: pointer; }
+#sub.community > .contents .w100 > .list > h3 { font-family: SquareB; font-size: 2.1em; text-align: left; color: #666; padding-bottom: 30px; padding-left: 10px; }
+#sub.community > .contents .w100 > .list > ul > li { border: 1px solid #ccc; padding: 15px; background: #fff; cursor: pointer; }
 #sub.community > .contents .w100 > .list > ul > li:first-child { border-bottom: none; }
 #sub.community > .contents .w100 > .list > ul > li > div, i { vertical-align: middle; color: #555; }
 #sub.community > .contents .w100 > .list > ul > li > i { float: right; }
@@ -225,19 +281,21 @@
 
 
 #sub.community > .contents .w100 > .board { width: 75%; margin-right: -4px; padding-left: 30px; }
-#sub.community > .contents .w100 > .board > h5 { font-size: 1.8em; font-family: SquareB; color: #555; padding-right: 15px; vertical-align: bottom; }
-#sub.community > .contents .w100 > .board > div { color: #999; font-size: 0.9em; vertical-align: bottom; }
+#sub.community > .contents .w100 > .board > h5 { font-size: 1.9em; font-family: SquareB; color: #555; padding-right: 15px; vertical-align: bottom; }
+#sub.community > .contents .w100 > .board > div { color: #999; vertical-align: bottom; }
 #sub.community > .contents .w100 > .board > table { margin-top: 33px; border-collapse: collapse; width: 100%; margin-bottom: 15px; }
-#sub.community > .contents .w100 > .board > table th { border-top: 2px solid #eb6363; border-bottom: 1px solid #ccc; text-align: center; line-height: 50px; width: 5%; }
+#sub.community > .contents .w100 > .board > table th { border-top: 2px solid #eb6363; border-bottom: 1px solid #ccc; text-align: center; line-height: 50px; width: 5%; font-size: 1.1em; }
 #sub.community > .contents .w100 > .board > table th:nth-child(2) { width: 30%; }
 #sub.community > .contents .w100 > .board > table td { border-bottom: 1px solid #ccc; width: 100px; text-align: center; line-height: 35px; }
 #sub.community > .contents .w100 > .board > table td:nth-child(2) { text-align: left; }
-#sub.community > .contents .w100 > .board > a {  }
-#sub.community > .contents .w100 > .board > a:last-child { float: right; border: 1px solid #eb6363; background: #eb6363; color: white; width: auto; padding: 10px 20px; border-radius: ; font-size: 0.9em; }
+#sub.community > .contents .w100 > .board > div { text-align: center; padding-top: 10px; }
+#sub.community > .contents .w100 > .board > div > a { border: 1px solid #eb6363; width: 25px; height: 25px; margin: 0px 3px; text-align: center; line-height: 25px; }
+#sub.community > .contents .w100 > .board > div > a:nth-child(3) { background: #eb6363; color: white; }
+#sub.community > .contents .w100 > .board > a { float: right; background: #eb6363; border: 1px solid #eb6363; color: white; width: auto; padding: 10px 20px; }
 
 /* page/board/view.php */
 #sub.community > .contents .w100 > .view > .title { padding-bottom: 30px; }
-#sub.community > .contents .w100 > .view > .title > h5 { font-size: 1.8em; font-family: SquareB; color: #555; padding-right: 15px; vertical-align: bottom; }
+#sub.community > .contents .w100 > .view > .title > h5 { font-size: 1.9em; font-family: SquareB; color: #555; padding-right: 15px; vertical-align: bottom; }
 #sub.community > .contents .w100 > .view > .title > div { color: #999; font-size: 0.9em; vertical-align: bottom; }
 #sub.community > .contents .w100 > .view { width: 75%; margin-right: -4px; padding-left: 30px; }
 #sub.community > .contents .w100 > .view > div:nth-child(2) > div { width: 100%; border-bottom: 1px solid #F7F5F8; }
@@ -247,14 +305,40 @@
 #sub.community > .contents .w100 > .view > div:nth-child(2) > .view { width: 50%; }
 #sub.community > .contents .w100 > .view > div:nth-child(2) > .title { border-top: 2px solid #eb6363; margin-top: 4px; }
 #sub.community > .contents .w100 > .view > div:nth-child(2) > div:last-child { padding: 5px; min-height: 200px; border-bottom: 1px solid #eb6363; margin-bottom: 20px; line-height: 20px; white-space: pre-line; font-size: 1.1em; }
-#sub.community > .contents .w100 > .view > a { width: auto; background: #eb6363; border-radius: 20px; color: white; float: right; cursor: pointer; padding: 7px 15px; border: 1px solid #eb6363; margin-left: 10px;}
+#sub.community > .contents .w100 > .view > a { width: auto; background: #eb6363; color: white; float: right; cursor: pointer; padding: 8px 18px; border: 1px solid #eb6363; margin-left: 10px;}
+
+#sub.community > .contents .w100 > .view > div.comments { padding-top: 50px; padding-bottom: 20px; }
+#sub.community > .contents .w100 > .view > div.comments > div:first-child { font-family: SquareB; font-size: 1.2em; color: #555; padding-bottom: 5px; }
+#sub.community > .contents .w100 > .view > div.comments > div:nth-child(2) > form > textarea { min-height: 80px; padding: 7px; border-radius: 10px; }
+#sub.community > .contents .w100 > .view > div.comments > div:nth-child(2) > form > button { float: right; width: 50px; padding: 5px 0px; border: 1px solid #eb6363; border-radius: 10px; color: white; background: #eb6363; margin-top: 5px; cursor: pointer; }
+#sub.community > .contents .w100 > .view > div.comments > ul { padding-top: 20px; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li { padding: 15px 0px; border-bottom: 1px solid #ccc}
+#sub.community > .contents .w100 > .view > div.comments > ul > li:last-child { border: none; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div.writeSubreply { padding-top: 10px; padding-left: 65px; padding-right: 10px; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div.writeSubreply > form > textarea { min-height: 50px; padding: 7px; border-radius: 10px; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div.writeSubreply > form > button { float: right; width: 50px; padding: 5px 0px; border: 1px solid #eb6363; border-radius: 10px; color: white; background: #eb6363; margin-top: 5px; cursor: pointer; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div.subcomment { border-left: 1px solid #ccc; padding-left: 40px; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div:first-child { width: 7%; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div:first-child > div.image { border: 1px solid #aaa; background: #ccc; border-radius: 40px; width: 45px; height: 45px; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents { padding: 0px 10px; width: 93%; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > div.name { font-size: 1.5em; font-family: SquareB; padding-right: 10px; vertical-align: middle; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > ul { vertical-align: middle; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > .text { min-height: 60px; border: 1px solid #aaa; border-radius: 10px;  padding: 8px; font-size: 1.2em; margin: 10px 0px; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > .date { float: right; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > div:last-child { text-align: right; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > div:last-child > a { font-size: 1.1em; padding: 5px; }
+#sub.community > .contents .w100 > .view > div.comments > ul > li > div > div.contents > div:last-child > a:hover { text-decoration-line: underline; transition: all .3s; }
 
 /* page/board/write.php */
 #sub.community > .contents .w100 > .board > .write { margin-top: 30px; padding-top: 20px; border-top: 2px solid #eb6363; }
-#sub.community > .contents .w100 > .board > .write > form > ul > li { font-size: 1.5em; font-family: SquareB; padding: 5px 5px; } 
+#sub.community > .contents .w100 > .board > .write > form > ul > li { font-size: 1.5em; font-family: SquareB; padding: 5px 5px; text-align: left; } 
 #sub.community > .contents .w100 > .board > .write > form > ul > li > input { font-size: 0.8em; padding: 5px; order: 1px solid #ccc; margin: 10px 0px; }
 #sub.community > .contents .w100 > .board > .write > form > ul > li:last-child > textarea { font-size: 0.8em; margin: 10px 0px; padding: 5px; height: 200px; }
 #sub.community > .contents .w100 > .board > .write > form > ul > li:last-child { border-bottom: 1px solid #eb6363; margin-bottom: 20px; }
+<<<<<<< HEAD
+#sub.community > .contents .w100 > .board > .write > form > button { width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; float: right; padding: 10px 25px; }
+#sub.community > .contents .w100 > .board > .write > form > a { width: auto; height: auto; background: #eb6363; border: 1px solid #eb6363; color: white; float: right; padding: 10px 25px; margin-right: 10px; }
+
 #sub.community > .contents .w100 > .board > .write > form > button { width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; cursor: pointer; float: right; padding: 7px 15px; border-radius: 20px; }
 #sub.community > .contents .w100 > .board > .write > a { width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; cursor: pointer; float: right; padding: 7px 15px; border-radius: 20px; margin-right: 10px; }
 

@@ -60,6 +60,89 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                 <a href="/page/board/index.php" class="inlineBlock">목록</a>
                 <a href="#" class="inlineBlock">수정</a>
                 <a href="/page/board/delete.php?idx=<?php echo $row['idx']; ?>" class="inlineBlock">삭제</a>
+                <div class="comments">
+                   <?php 
+                    $sql = " select count(*) from comment where post=?";
+                    $totals = $pdo -> prepare($sql);
+                    $totals -> execute(array($idx));
+                    $total = $totals -> fetchColumn();
+                    ?>
+                    <div>Comments <?php echo $total ?>개</div>
+                    <div>
+                        <form action="/page/board/saveReply.php?idx=<?php echo $row['idx']; ?>" method="post">
+                            <textarea name="contents" placeholder="댓글달기" required></textarea>                           
+                            <button type="submit">작성</button>
+                        </form>
+                    </div>
+                    <?php 
+                    $sql = "select * from comment where post=? order by wdate desc";
+                    $comment = $pdo->prepare($sql);
+                    $comment -> execute(array($idx));
+                    ?>
+                    <ul>
+                       <?php 
+                        while($result = $comment->fetch()){
+                        ?>
+                        <li>
+                            <div class="comment">
+                                <div class="inlineBlock">
+                                    <div class="image">&nbsp;</div>
+                                </div>
+                                <div class="contents inlineBlock">
+                                    <div class="name inlineBlock"><?php echo $result['writer']; ?></div>
+                                    <ul class="inlineBlock">
+                                        <li class="tagWhite inlineBlock">직장인</li>
+                                        <li class="tagWhite inlineBlock">30대 초반</li>
+                                        <li class="tagWhite inlineBlock">여성</li>
+                                    </ul>
+                                    <div class="date inlineBlock"><?php echo $result['wdate']; ?></div>
+                                    <div class="text"><?php echo $result['contents']; ?></div>
+                                    <div>
+                                        <a href="#" class="inlineBlock">답글달기</a>
+                                        <a href="#" class="inlineBlock">수정</a>
+                                        <a href="/page/board/deleteReply.php?idx=<?php echo $result['idx']; ?>" class="inlineBlock">삭제</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="writeSubreply">
+                                <form action="/page/board/saveSubreply.php?idx=<?php echo $result['idx']; ?>" method="post">
+                                    <textarea name="contents" placeholder="대댓글달기" required></textarea>                           
+                                    <button type="submit">작성</button>
+                                </form>
+                            </div>
+                            <?php 
+                            $sql="select * from subcomment where comment=? order by wdate desc";
+                            $sub = $pdo->prepare($sql);
+                            $sub -> execute(array($result['idx']));
+                            
+                            while($subcomment = $sub->fetch()){
+                            ?>
+                            <div class="subcomment">
+                                <div class="inlineBlock">
+                                    <div class="image">&nbsp;</div>
+                                </div>
+                                <div class="contents inlineBlock">
+                                    <div class="name inlineBlock"><?php echo $subcomment['writer']; ?></div>
+                                    <ul class="inlineBlock">
+                                        <li class="tagWhite inlineBlock">직장인</li>
+                                        <li class="tagWhite inlineBlock">30대 초반</li>
+                                        <li class="tagWhite inlineBlock">여성</li>
+                                    </ul>
+                                    <div class="date inlineBlock"><?php echo $subcomment['wdate']; ?></div>
+                                    <div class="text"><?php echo $subcomment['contents']; ?></div>
+                                    <div>
+                                        <a href="#" class="inlineBlock">수정</a>
+                                        <a href="/page/board/deleteSubreply.php?idx=<?php echo $subcomment['idx']; ?>" class="inlineBlock">삭제</a>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php 
+                            }
+                        }
+                        ?>
+                         
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
