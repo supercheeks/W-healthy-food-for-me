@@ -58,7 +58,7 @@ $save->execute(array($idx));
                         <div class="inlineBlock">조회수</div>
                         <div class="inlineBlock"><?php echo $post['view']; ?></div>
                     </div>
-                    <div class="contents">
+                    <div>
                         <?php echo $post['contents']; ?>
                     </div>
                 </div>
