@@ -253,15 +253,31 @@
                         .review > .right > div.reviewList > ul > li.naver {}
 
 /* page/event/index.php */
-#sub.ranking > .contents .w100 > .list { padding-top: 30px; }
-#sub.ranking > .contents .w100 > .list > .item { width: 50%; padding-bottom: 20px; }
-#sub.ranking > .contents .w100 > .list > .item:nth-child(odd) { padding-right: 20px; }
-#sub.ranking > .contents .w100 > .list > .item:nth-child(even) { padding-left: 20px; }
-#sub.ranking > .contents .w100 > .list > .item > div:first-child { border: 1px solid #bbb; width: 100%; height: 200px; color: #aaa; text-align: center; line-height: 200px; cursor: pointer; background: #eee}
-#sub.ranking > .contents .w100 > .list > .item > div:first-child:hover { box-shadow: 0px 0px 10px rgba(0,0,0,0.1); transition: all 0.3s; }
-#sub.ranking > .contents .w100 > .list > .item > div:last-child { padding: 15px 0px; }
-#sub.ranking > .contents .w100 > .list > .item > div:last-child > h5 { font-family: SquareB; font-size: 1.3em; vertical-align: middle; cursor: pointer; padding-left: 5px; }
-#sub.ranking > .contents .w100 > .list > .item > div:last-child > div { float: right; vertical-align: middle; padding-right: 5px; font-size: 0.97em; }
+#sub.event > .contents .w100 > .list { padding-top: 30px; }
+#sub.event > .contents .w100 > .list > .item { width: 50%; padding-bottom: 20px; }
+#sub.event > .contents .w100 > .list > .item:nth-child(odd) { padding-right: 20px; }
+#sub.event > .contents .w100 > .list > .item:nth-child(even) { padding-left: 20px; }
+#sub.event > .contents .w100 > .list > .item > div:first-child { border: 1px solid #bbb; width: 100%; height: 200px; color: #aaa; text-align: center; line-height: 200px; cursor: pointer; background: #eee}
+#sub.event > .contents .w100 > .list > .item > div:first-child:hover { box-shadow: 0px 0px 10px rgba(0,0,0,0.1); transition: all 0.3s; }
+#sub.event > .contents .w100 > .list > .item > div:last-child { padding: 15px 0px; }
+#sub.event > .contents .w100 > .list > .item > div:last-child > h5 { font-family: SquareB; font-size: 1.3em; vertical-align: middle; cursor: pointer; padding-left: 5px; }
+#sub.event > .contents .w100 > .list > .item > div:last-child > div { float: right; vertical-align: middle; padding-right: 5px; font-size: 0.97em; }
+
+#sub.event > .contents .w100 > .list > div:last-child { text-align: right; padding-bottom: 30px; }
+#sub.event > .contents .w100 > .list > div:last-child > a { background: #eb6363; border: 1px solid #eb6363; color: white; width: auto; padding: 10px 20px;  }
+
+/* page/event/write.php */
+#sub.event > .contents .w100 > .write { border-top: 2px solid #eb6363; }
+#sub.event > .contents .w100 > .write > form > ul > li { padding: 5px 0px; border-bottom: 1px solid #eb6363; }
+#sub.event > .contents .w100 > .write > form > ul > li > div { width: 7%; height: 100%; font-size: 1.2em; font-family: SquareB; padding: 5px; vertical-align: middle; text-align: center; }
+#sub.event > .contents .w100 > .write > form > ul > li > input { width: 90%; padding: 5px; border: 1px solid #ccc; margin: 10px; vertical-align: middle; }
+#sub.event > .contents .w100 > .write > form > ul > li.image > input { border: none; }
+#sub.event > .contents .w100 > .write > form > ul > li.date > input { width: auto; padding: 5px; border: 1px solid #ccc; margin: 10px; vertical-align: middle; }
+#sub.event > .contents .w100 > .write > form > ul > li:last-child { border-bottom: 2px solid #eb6363; margin-bottom: 15px; }
+#sub.event > .contents .w100 > .write > form > div { text-align: right; }
+#sub.event > .contents .w100 > .write > form > div > button { margin-left: 5px; font-size: 1.1em; width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; padding: 10px 20px; cursor: pointer; }
+#sub.event > .contents .w100 > .write > form > div > a { margin-left: 5px; font-size: 1.1em; width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; padding: 10px 20px; }
+
 
 /* page/brand/index.php */
 #sub.brand > .searchList .w100 > .list > ul > li > .contents > .left > .detail { font-size: 0.9em; color: #999; margin-top: 10px;}
@@ -329,8 +345,7 @@
 
 /* page/board/write.php */
 #sub.community > .contents .w100 > .board > .write { margin-top: 30px; border-top: 2px solid #eb6363; }
-#sub.community > .contents .w100 > .board > .write > form > ul > li { padding: 5px 0px; } 
-#sub.community > .contents .w100 > .board > .write > form > ul > li { border-bottom: 1px solid #eb6363; } 
+#sub.community > .contents .w100 > .board > .write > form > ul > li { padding: 5px 0px; border-bottom: 1px solid #eb6363; }  
 #sub.community > .contents .w100 > .board > .write > form > ul > li > div { width: 7%; height: 100%; font-size: 1.2em; font-family: SquareB; padding: 5px; vertical-align: middle; } 
 #sub.community > .contents .w100 > .board > .write > form > ul > li.title > input { width: 90%; padding: 5px; border: 1px solid #ccc; margin: 10px; vertical-align: middle; }
 #sub.community > .contents .w100 > .board > .write > form > ul > li.contents > textarea { margin: 10px; padding: 5px; min-height: 200px; width: 90%; vertical-align: middle; max-width: 100%; }
