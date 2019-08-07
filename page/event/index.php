@@ -12,48 +12,23 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
     <div class="contents">
         <div class="w100">
            <div class="list">
+              <?php 
+                $sql = " select * from event order by wdate desc";
+                $save = $pdo -> prepare($sql);
+                $save -> execute();
+               
+                while($event = $save->fetch()){
+               ?>
                <div class="item inlineBlock">
-                    <div>image</div>
+                    <a href="/page/event/view.php?idx=<?php echo $event['idx']; ?>" class="inlineBlock"><img src="<?php echo $event['file']; ?>" alt=""></a>
                     <div>
-                        <h5 class="inlineBlock">제품 평가단 모집</h5>
-                        <div class="inlineBlock">2019-07-29</div>
+                        <a href="/page/event/view.php?idx=<?php echo $event['idx']; ?>" class="inlineBlock"><?php echo $event['title']; ?></a>
+                        <div class="inlineBlock"><?php echo $event['wdate']; ?></div>
                     </div>    
                 </div>
-                <div class="item inlineBlock">
-                    <div>image</div>
-                    <div>
-                        <h5 class="inlineBlock">제품 평가단 모집</h5>
-                        <div class="inlineBlock">2019-07-29</div>
-                    </div>    
-                </div>
-                <div class="item inlineBlock">
-                    <div>image</div>
-                    <div>
-                        <h5 class="inlineBlock">제품 평가단 모집</h5>
-                        <div class="inlineBlock">2019-07-29</div>
-                    </div>    
-                </div>
-                <div class="item inlineBlock">
-                    <div>image</div>
-                    <div>
-                        <h5 class="inlineBlock">제품 평가단 모집</h5>
-                        <div class="inlineBlock">2019-07-29</div>
-                    </div>    
-                </div>
-                <div class="item inlineBlock">
-                    <div>image</div>
-                    <div>
-                        <h5 class="inlineBlock">제품 평가단 모집</h5>
-                        <div class="inlineBlock">2019-07-29</div>
-                    </div>    
-                </div>
-                <div class="item inlineBlock">
-                    <div>image</div>
-                    <div>
-                        <h5 class="inlineBlock">제품 평가단 모집</h5>
-                        <div class="inlineBlock">2019-07-29</div>
-                    </div>    
-                </div>
+                <?php 
+                }
+               ?>
                 <div>
                     <a href="/page/event/write.php">글쓰기</a>    
                 </div>

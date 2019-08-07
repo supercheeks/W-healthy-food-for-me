@@ -67,9 +67,6 @@ $page = $_GET['page'];
                                 <div class="inlineBlock">내용</div>
                                 <textarea class="inlineBlock" name="contents" placeholder="내용을 입력하세요" required></textarea>
                             </li>
-                            <li class="file">
-                                <div class="inlineBlock">이미지<br>업로드</div>
-                            </li>
                         </ul>
                         <div>
                             <button type="submit">작성</button>

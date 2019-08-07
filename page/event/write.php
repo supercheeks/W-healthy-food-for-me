@@ -16,21 +16,21 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                    <ul>
                        <li class="title">
                            <div class="inlineBlock">제목</div>
-                           <input name="title" type="text" class="inlineBlock" placeholder="제목을 입력하세요" autocomplete="off">
+                           <input id="title" name="title" type="text" class="inlineBlock" placeholder="제목을 입력하세요" autocomplete="off">
                        </li>
                        <li class="image">
                            <div class="inlineBlock">이미지<br>업로드</div>
-                           <input name="image" type="file" class="inlineBlock" >
+                           <input id="image" name="image" type="file" class="inlineBlock" autocomplete="off">
                        </li>
                        <li class="product">
                            <div class="inlineBlock">제품명</div>
-                           <input name="product" type="text" class="inlineBlock" placeholder="제품명 선택">
+                           <input id="product" name="product" type="text" class="inlineBlock" placeholder="제품명 선택" autocomplete="off">
                        </li>
                        <li class="date">
                            <div class="inlineBlock">이벤트<br>기한</div>
-                           <input name="sdate" type="datetime" class="inlineBlock" id="sdate" placeholder="시작날짜">
+                           <input id="sdate" name="sdate" type="date" class="inlineBlock" id="sdate" placeholder="시작날짜" autocomplete="off">
                            <span>~</span>
-                           <input name="edate" type="datetime" class="inlineBlock" id="edate" placeholder="종료날짜">
+                           <input id="edate" name="edate" type="date" class="inlineBlock" id="edate" placeholder="종료날짜" autocomplete="off">
                        </li>
                    </ul>
                    <div>
@@ -42,11 +42,6 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
         </div>
     </div>
 </section>
-<script>
-$(function(){
-   $("#sdate, #edate").datepicker(); 
-});
-</script>
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/include/footer.php";
 ?>
