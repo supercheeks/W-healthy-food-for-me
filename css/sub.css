@@ -266,11 +266,12 @@
 #sub.event > .contents .w100 > .list > div:last-child > a { background: #eb6363; border: 1px solid #eb6363; color: white; width: auto; padding: 10px 20px;  }
 
 /* page/event/write.php */
-#sub.event > .contents .w100 > .write { border-top: 2px solid #eb6363; }
+#sub.event > .contents .w100 > .write { border-top: 2px solid #eb6363; padding-bottom: 30px; }
 #sub.event > .contents .w100 > .write > form > ul > li { padding: 5px 0px; border-bottom: 1px solid #eb6363; }
 #sub.event > .contents .w100 > .write > form > ul > li > div { width: 7%; height: 100%; font-size: 1.2em; font-family: SquareB; padding: 5px; vertical-align: middle; text-align: center; }
 #sub.event > .contents .w100 > .write > form > ul > li > input { width: 90%; padding: 5px; border: 1px solid #ccc; margin: 10px; vertical-align: middle; }
 #sub.event > .contents .w100 > .write > form > ul > li.image > input { border: none; }
+#sub.event > .contents .w100 > .write > form > ul > li.thumbnail > input { border: none; }
 #sub.event > .contents .w100 > .write > form > ul > li.date > input { width: auto; padding: 5px; border: 1px solid #ccc; margin: 10px; vertical-align: middle; }
 #sub.event > .contents .w100 > .write > form > ul > li:last-child { border-bottom: 2px solid #eb6363; margin-bottom: 15px; }
 #sub.event > .contents .w100 > .write > form > div { text-align: right; }
@@ -291,7 +292,7 @@
 #sub.event > .contents .w100 > .view > div.apply > a:hover { color: #eb6363; background: white; transition: all .3s; }
 #sub.event > .contents .w100 > .view > div.apply > a { font-size: 1.1em; width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; padding: 13px 30px; }
 #sub.event > .contents .w100 > .view > div:last-child { text-align: right; }
-#sub.event > .contents .w100 > .view > div:last-child > a { font-size: 1.1em; width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; padding: 10px 25px;  }
+#sub.event > .contents .w100 > .view > div:last-child > a { font-size: 1.1em; width: auto; background: #eb6363; border: 1px solid #eb6363; color: white; padding: 10px 25px; margin-left: 5px; }
 
 /* page/brand/index.php */
 #sub.brand > .searchList .w100 > .list > ul > li > .contents > .left > .detail { font-size: 0.9em; color: #999; margin-top: 10px;}

@@ -39,8 +39,10 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                </ul>
                <div class="apply">    
                    <a href="#">신청하기</a>
-               </div>
+               </div>          
                <div>
+                   <a href="/page/event/write.php?idx=<?php echo $event['idx']; ?>">수정</a>
+                   <a href="/page/event/delete.php?idx=<?php echo $event['idx']; ?>">삭제</a>
                    <a href="/page/event/index.php">목록</a>
                </div>
            </div>

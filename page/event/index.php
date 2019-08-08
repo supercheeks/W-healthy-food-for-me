@@ -20,7 +20,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                 while($event = $save->fetch()){
                ?>
                <div class="item inlineBlock">
-                    <a href="/page/event/view.php?idx=<?php echo $event['idx']; ?>" class="inlineBlock"><img src="<?php echo $event['file']; ?>" alt=""></a>
+                    <a href="/page/event/view.php?idx=<?php echo $event['idx']; ?>" class="inlineBlock"><img src="<?php echo $event['thumbnail']; ?>" alt=""></a>
                     <div>
                         <a href="/page/event/view.php?idx=<?php echo $event['idx']; ?>" class="inlineBlock"><?php echo $event['title']; ?></a>
                         <div class="inlineBlock"><?php echo $event['wdate']; ?></div>
