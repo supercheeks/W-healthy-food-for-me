@@ -12,7 +12,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
     <div class="contents">
         <div class="w100">
             <div class="list inlineBlock">
-                <h3>커뮤니티</h3>
+                <h5>커뮤니티</h5>
                 <ul>
                     <li class="active">
                         <div class="inlineBlock">자유게시판</div>
@@ -25,8 +25,10 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                 </ul>
             </div>
             <div class="board inlineBlock">
-                <h5 class="inlineBlock">자유게시판</h5>
-                <div class="inlineBlock">게시판 설명 게시판 설명 게시판 설명</div>
+                <div class="title">
+                    <h5 class="inlineBlock">자유게시판</h5>
+                    <div class="inlineBlock">자유게시판 입니다.</div>
+                </div>
                 <table>
                     <thead>
                         <tr>
@@ -34,7 +36,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                             <th>제목</th>
                             <th>작성자</th>
                             <th>작성일</th>
-                            <th>조회</th>
+                            <th>조회수</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -55,16 +57,16 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                         ?>
                         <tr>
                             <td><?php echo $result['idx']; ?></td>
-                            <td><a href="/page/board/view.php?idx=<?php echo $result['idx']; ?>"><?php echo $result['title']; ?></a></td>
+                            <td><a href="/page/board/view.php?idx=<?php echo $result['idx']; ?>&page=<?php echo $page; ?>"><?php echo $result['title']; ?></a></td>
                             <td><?php echo $result['writer']; ?></td>
                             <td><?php echo $result['wdate']; ?></td>
-                            <td><?php echo $result['view']?></td>
+                            <td><?php echo $result['view']; ?></td>
                         </tr>
                         <?php
                         }?>
                     </tbody>
                 </table>
-                <div>
+                <div class="paging">
                 <?php 
                 $pageCnt = 5;
 
@@ -91,7 +93,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                 }
                 ?>
                 </div>
-                <a href="/page/board/write.php">글쓰기</a>
+                <a href="/page/board/write.php?page=<?php echo $page; ?>">글쓰기</a>
             </div>
         </div>
     </div>
