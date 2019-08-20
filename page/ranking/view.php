@@ -461,6 +461,7 @@ while($c = $certs -> fetch())
                     <div class="reviewList">
                         <div>
                             <h4>리뷰</h4>
+                            <a href="/page/review/write.php">후기작성</a>
                             <select name="#" id="order">
                                 <option value="wdate desc">최신순</option>
                                 <option value="wdate asc">오래된 순</option>
