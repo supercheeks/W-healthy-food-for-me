@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="/js/jqueryui/external/jquery/jquery.js"></script>
+</head>
+<body>
+<pre class="result"></pre>
+
+<script>
+$(function() {
+     $.getJSON("/tmp/material/material.json", function(data) {
+            var row = data["I-0040"].row;
+            $(row).each(function(e, el) {
+                var maker = el.BSSH_NM;
+                var name = el.APLC_RAWMTRL_NM;
+                var intake = el.DAY_INTK_CN;
+                var func = el.FNCLTY_CN;
+                var warn = el.IFTKN_ATNT_MATR_CN;
+
+                var temp = {
+                    "name": name,
+                    "maker": maker,
+                    "intake": intake,
+                    "func": func,
+                    "warn": warn
+                };
+                
+                $(".result").append(JSON.stringify(temp));
+                $(".result").append(",");
+            });
+        });
+});    
+</script>
+</body>
+</html>

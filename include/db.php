@@ -1,3 +1,3 @@
 <?php
-$pdo = new PDO("mysql:host=localhost;dbname=healthyfoodforme;charset=utf8", "root", "");
+$pdo = new PDO("mysql:host=localhost;dbname=healthyfoodsforme;charset=utf8", "root", "");
 ?>

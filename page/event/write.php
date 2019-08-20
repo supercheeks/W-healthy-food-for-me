@@ -1,5 +1,23 @@
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/include/db.php";
+<<<<<<< HEAD
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<form action="/page/event/save.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" id="image">
+    <button type="submit">업로드</button>
+</form>
+</body>
+</html>
+=======
 include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
 ?>
 <section id="sub" class="event">
@@ -93,3 +111,4 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/include/footer.php";
 ?>
+>>>>>>> 2b83ea4ff10afa05205a85c1efbd8553bd459e01
