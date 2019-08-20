@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="/js/jqueryui/external/jquery/jquery.js"></script>
+</head>
+<body>
+<script>
+function replaceStr(str, delimeter, joiner) {
+    str = str.split(delimeter);
+    str = str.join(joiner);
+    
+    return str;
+}
+    
+$(function() {
+    $.getJSON("/tmp/material/data.json", function(data) {
+        data = data.result;
+        var csv = [];
+        
+//        console.log(data);
+        
+        $(data).each(function(e, el) {
+            var name = replaceStr(el.name, ",", "/");
+            var maker = replaceStr(el.maker, ",", "/");
+            var intake = replaceStr(el.intake, ",", "/");
+            var func = replaceStr(el.func, "\n", "?");
+            func = replaceStr(func, ",", "/");
+            var warn = replaceStr(el.warn, ",", "/");
+            var temp = [e + 1, name];
+            
+            csv.push(temp.join(","));
+        });
+        
+        csv = csv.join("\r\n");
+        
+        var blob = new Blob(["\ufeff"+csv], {
+            type: 'text/csv;charset=utf8'
+        });
+        
+        var a = document.createElement('a');
+        var url = URL.createObjectURL(blob);
+        a.href = url;
+        a.download = "material_data.csv";
+        a.click();
+    });
+});    
+</script>    
+</body>
+</html>

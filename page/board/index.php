@@ -43,11 +43,11 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                         $totals = $pdo -> prepare($sql);
                         $totals -> execute();
                         $total = $totals -> fetchColumn();
-                        $page = (isset($_GET['page'])) ? $_GET['page'] : 0;
+                        $page = (isset($_GET['page'])) ? $_GET['page'] : 1;
                         $cnt = 10;
                         $totalPage = $total / $cnt;
                         
-                        $sql = " select * from board order by wdate desc limit ".(($page)*$cnt).", ".$cnt;
+                        $sql = " select * from board order by wdate desc limit ".(($page - 1)*$cnt).", ".$cnt;
                     
                         $rs = $pdo->prepare($sql);
                         $rs -> execute();
@@ -64,19 +64,33 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
                         }?>
                     </tbody>
                 </table>
-            <?php 
-            $pageCnt = 5;
+                <div>
+                <?php 
+                $pageCnt = 5;
 
-            $start = floor(($page - 1) / $pageCnt);
-            $start = ($start < 0) ? 0 : $start;
-            $start = $start * $pageCnt + 1;
+                $start = floor(($page - 1) / $pageCnt);
+                $start = ($start < 0) ? 0 : $start;
+                $start = $start * $pageCnt + 1;
+                
+                if(($start-1)>0){
+                ?>
 
-            for($i = $start; $i < $start + $pageCnt; $i++){
-            ?>
-                <a href="/page/board/index.php?page=<?php echo $i; ?>" class="inlineBlock"><?php echo $i; ?></a>
-            <?php 
-            }
-            ?>
+                    <a href="/page/board/index.php?page=<?php echo ($start-1)?>" class="before inlineBlock"><i class="fas fa-angle-left"></i></a>
+                <?php
+                }
+                    
+                for($i = $start; $i < $start + $pageCnt; $i++){
+                ?>
+                    <a href="/page/board/index.php?page=<?php echo $i; ?>" class="inlineBlock"><?php echo $i; ?></a>
+                <?php 
+                }
+                if(($start+5) <= $totalPage){
+                ?>
+                    <a href="/page/board/index.php?page=<?php echo ($start+5)?>" class="after inlineBlock"><i class="fas fa-angle-right"></i></a>
+                <?php 
+                }
+                ?>
+                </div>
                 <a href="/page/board/write.php">글쓰기</a>
             </div>
         </div>

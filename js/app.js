@@ -8,4 +8,5 @@ function off(selector, event) {
 
 $(function() {
     $(".memberForm .left").height($(".memberForm .w100").height());
+    $(".toolTip").tooltip();
 });

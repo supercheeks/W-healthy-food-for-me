@@ -1,6 +1,99 @@
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/include/db.php";
+include $_SERVER["DOCUMENT_ROOT"]."/include/function.php";
 include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
+
+$idx = (isset($_GET["idx"])) ? $_GET["idx"] : 0;
+
+$sql =  " select ".
+        "   p.name as name, ".
+        "   p.idx as pIdx, ".
+        "   p.image as image, ".
+        "   p.tag as tag, ".
+        "   p.contents as contents, ".
+        "   p.functionalMaterial as functionalMaterial, ".
+        "   p.volume as volume, ".
+        "   p.numTimes as numTimes, ".
+        "   p.price as price, ".
+        "   p.certification as certification, ".
+        "   b.name as brand, ".
+        "   b.image as brandImage, ".
+        "   n.intake as intake, ".
+        "   n.kcal as kcal, ".
+        "   n.carb as carb, ".
+        "   n.sugar as sugar, ".
+        "   n.dietaryFiber as dietaryFiber, ".
+        "   n.protein as protein, ".
+        "   n.fat as fat, ".
+        "   n.satFat as satFat, ".
+        "   n.transFat as transFat, ".
+        "   n.cholesterol as cholesterol, ".
+        "   n.vitamin as vitamin, ".
+        "   n.mineral as mineral, ".
+        "   n.Na as Na ".
+        " from product as p ".
+        " join brand as b ".
+        "   on b.name = p.brand ".
+        " join nutrient as n ".
+        "   on n.FK_product = p.idx ".
+        " where ".
+        "   p.idx = ? ";
+$products = $pdo -> prepare($sql);
+$products -> execute(array($idx));
+$product = $products -> fetch();
+
+$tag = array();
+$tags = parseStringToArray($product["tag"], 0);
+
+foreach($tags as $t) {
+    $sql = " select name from tag where idx = ? ";
+    $rs = $pdo -> prepare($sql);
+    $rs -> execute(array($t));
+    $tag[] = $rs -> fetchColumn();
+}
+
+$functionalMaterials = parseStringToArray($product["functionalMaterial"], 1);
+
+foreach($functionalMaterials as $fKey => $f) {
+    $sql = " select name from functionalMaterial where idx = ? ";
+    $rs = $pdo -> prepare($sql);
+    $rs -> execute(array($f[0]));
+    $row = $rs -> fetchColumn();
+    $tag[] = $row;
+    $functionalMaterials[$fKey][0] = $row;
+}
+
+$info = array();
+$volume = parseStringToArray($product["volume"], 0);
+$numTimes = parseStringToArray($product["numTimes"], 0);
+$price = parseStringToArray($product["price"], 0);
+
+foreach($volume as $key => $v) {
+    $info[] = array(
+        "volume" => $volume[$key],
+        "numTimes" => $numTimes[$key],
+        "price" => (isset($price[$key])) ? $price[$key] : NULL
+    );
+}
+
+$vitamin = parseStringToArray($product["vitamin"], 1);
+$mineral = parseStringToArray($product["mineral"], 1);
+
+$warn = NULL;
+$sql = " select * from warn where FK_product = ? ";
+$warns = $pdo -> prepare($sql);
+$warns -> execute(array( $idx ));
+if($warns -> rowCount())
+    $warn = $warns -> fetch();
+
+$cert = array();
+$certification = parseStringToArray($product["certification"], 0);
+
+$sql = " select * from certification order by idx asc ";
+$certs = $pdo -> prepare($sql);
+$certs -> execute();
+while($c = $certs -> fetch())
+    $cert[] = $c;
 ?>
 <section id="sub" class="rankingView">
     <div class="contents">
@@ -8,226 +101,240 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
             <div class="summary">
                 <div class="inlineBlock left">
                     <div class="img gradientProduct">
-                        <img src="/img/product_test.png" alt="">
+                        <img src="/img/product/<?php echo $product["image"]; ?>" alt="<?php echo $product["image"]; ?>" title="<?php echo $product["name"]; ?>">
                     </div>
                     
                     <div class="brand">
-                        <img src="/img/brandTest.jpg" alt="" class="inlineBlock">
-                        <h3 class="inlineBlock font_B">글램디</h3>
-                        <a href="/page/brand/view.php" class="inlineBlock">자세히 보기</a>
+                        <img src="/img/brand/<?php echo $product['brandImage']; ?>" alt="<?php echo $product['brandImage'];?>" title="<?php echo $product['brand']; ?>" class="inlineBlock">
+                        <h3 class="inlineBlock font_B"><?php echo $product["brand"]; ?></h3>
+                        <a href="/page/ranking/index.php?brand=<?php echo $product["brand"]; ?>" class="inlineBlock">자세히 보기</a>
                     </div>
                     
                     <ul class="tag">
-                        <li class="tagWhite inlineBlock">젤리</li>
-                        <li class="tagWhite inlineBlock">배고플때</li>
-                        <li class="tagWhite inlineBlock">복숭아맛</li>
+                    <?php
+                    foreach($tag as $t) {    
+                    ?>
+                        <li class="tagWhite inlineBlock"><?php echo $t; ?></li>
+                    <?php
+                    }
+                    ?>
                     </ul>
                 </div>
                 
                 <div class="inlineBlock right">
                     <h3>
-                        <span class="red font_EB">GLAM.D</span> 5킬로칼로리 워터젤리
+                        <span class="red font_EB"><?php echo $product["brand"]; ?></span> <?php echo $product["name"]; ?>
                         <p>다이어트 보조제 > 소분류</p>
                     </h3>
-                    <div>칼로리 걱정은 날려주고 과일 100% 농축액으로 맛을 더한 4킬로칼로리 곤약 워터젤리</div>
+                    <div><?php echo ($product["contents"] != "") ? $product["contents"] : "<p>등록 된 제품 소개가 없습니다.</p>"; ?></div>
                     <ul class="info">
                         <li>
                             <h4>용량 / 섭취횟수 / 가격</h4>
+                        <?php
+                        if($product["volume"] == "") {
+                            echo "<p>등록 된 용량, 섭취횟수 및 가격 정보가 없습니다.</p>";
+                        } else { 
+                        ?>
                             <ul class="price">
+                            <?php
+                            foreach($info as $key => $i) {
+                                $i["price"] = ($i["price"] == NULL) ? "-" : number_format($i["price"]);
+                            ?>
                                 <li>
-                                    <label for="price1" class="inlineBlock">
-                                        25g / 1회
-                                        <span>\2,500</span>
+                                    <label for="price<?php echo $key; ?>" class="inlineBlock">
+                                        <?php echo $i["volume"]." / ".$i["numTimes"]; ?>
+                                        <span><?php echo $i["price"]." 원"; ?></span>
                                     </label>
-                                    <input type="radio" name="type" class="inlineBlock" id="price1" checked>
+                                    <input type="radio" name="type" class="inlineBlock" id="price<?php echo $key; ?>" <?php echo ($key == 0) ? "checked" : ""; ?>>
                                 </li>
-                                <li>
-                                    <label for="price2" class="inlineBlock">
-                                        50g / 2회
-                                        <span>\4,500</span>
-                                    </label>
-                                    <input type="radio" name="type" class="inlineBlock" id="price2">
-                                </li>
+                            <?php
+                            }        
+                            ?>
                             </ul>
                             <div>
-                                <a href="#" class="naver_link">네이버 비교가 확인하기</a>
+                                <a href="https://search.shopping.naver.com/search/all.nhn?query=<?php echo $product["name"]; ?>" class="naver_link" target="_blank">네이버 비교가 확인하기</a>
                             </div>
+                        <?php
+                        }    
+                        ?>
                         </li>
                         <li class="table">
                             <h4>영양 성분</h4>
-                            <ul class="nutrientChart">
-                                <li style="width: calc((20 / 45) * 100%);">탄수화물 <span>44.4</span>%</li>
-                                <li style="width: calc((5 / 45) * 100%);">당류 <span>11.1</span>%</li>
-                                <li style="width: calc((13 / 45) * 100%);">식이섬유 <span>28.8</span>%</li>
-                                <li style="width: calc((7 / 45) * 100%);">단백질 <span>15</span>%</li>
-<!--
-                                <li>탄수화물 <span></span>%</li>
-                                <li>당류 <span></span>%</li>
-                                <li>식이섬유 <span></span>%</li>
-                                <li>단백질 <span></span>%</li>
-                                <li>지방 <span></span>%</li>
-                                <li>포화지방 <span></span>%</li>
-                                <li>트랜스지방 <span></span>%</li>
-                                <li>콜레스테롤 <span></span>%</li>
--->
-                            </ul>
+                        <?php
+                        if($product["intake"] == "") {
+                            echo "<p>등록 된 영양 정보가 없습니다.</p>";
+                        } else {  
+                        ?>
                             <table>
                                 <tr>
-                                    <td class="td1">칼로리</td>
-                                    <td colspan="2">78Kcal (45g)</td>
+                                    <td class="td1">칼로리<br><span style="color:#777;"><?php echo $product["intake"]; ?>기준</span></td>
+                                    <td colspan="2"><?php echo $product["kcal"]; ?></td>    
                                 </tr>
                                 <tr>
                                     <td class="td1">탄수화물</td>
-                                    <td colspan="2">20g</td>
+                                    <td colspan="2"><?php echo ($product["carb"] != NULL) ? $product["carb"] : "-"; ?></td>
                                 </tr>
                                 <tr>
                                     <td class="td1">당류</td>
-                                    <td colspan="2">5g</td>
+                                    <td colspan="2"><?php echo ($product["sugar"] != NULL) ? $product["sugar"] : "-"; ?></td>
                                 </tr>
                                 <tr>
                                     <td class="td1">식이섬유</td>
-                                    <td colspan="2">13g</td>
+                                    <td colspan="2"><?php echo ($product["dietaryFiber"] != NULL) ? $product["dietaryFiber"] : "-"; ?></td>
                                 </tr>
                                 <tr>
                                     <td class="td1">단백질</td>
-                                    <td colspan="2">7g</td>
+                                    <td colspan="2"><?php echo ($product["protein"] != NULL) ? $product["protein"] : "-"; ?></td>
                                 </tr>
                                 <tr>
                                     <td class="td1">지방</td>
-                                    <td colspan="2">0g</td>
+                                    <td colspan="2"><?php echo ($product["fat"] != NULL) ? $product["fat"] : "-"; ?></td>
                                 </tr>
                                 <tr>
                                     <td class="td1">포화지방</td>
-                                    <td colspan="2">0g</td>
+                                    <td colspan="2"><?php echo ($product["satFat"] != NULL) ? $product["satFat"] : "-"; ?></td>
                                 </tr>
                                 <tr>
                                     <td class="td1">트랜스지방</td>
-                                    <td colspan="2">0g</td>
+                                    <td colspan="2"><?php echo ($product["transFat"] != NULL) ? $product["transFat"] : "-"; ?></td>
                                 </tr>
                                 <tr>
                                     <td class="td1">콜레스테롤</td>
-                                    <td colspan="2">0g</td>
+                                    <td colspan="2"><?php echo ($product["cholesterol"] != NULL) ? $product["cholesterol"] : "-"; ?></td>
                                 </tr>
+                            <?php
+                            if(isset($vitamin[0][0])) {
+                                foreach($vitamin as $key => $v) {
+                            ?>
                                 <tr>
-                                    <td class="td1" rowspan="8">비타민</td>
-                                    <td class="td2">비타민A</td>
-                                    <td class="td3">175µgRE(25%)</td>
+                                    <?php echo ($key == 0) ? '<td class="td1" rowspan="'.count($vitamin).'">비타민</td>' : ''; ?>
+                                    <td class="td2"><?php echo $v[0]; ?></td>
+                                    <td class="td3"><?php echo $v[1]; ?></td>
                                 </tr>
-                                <tr>
-                                    <td class="td2">비타민B1</td>
-                                    <td class="td3">0.25mg(25%)</td>
-                                </tr>
-                                <tr>
-                                    <td class="td2">비타민B2</td>
-                                    <td class="td3">0.3mg(25%)</td>
-                                </tr>
-                                <tr>
-                                    <td class="td2">비타민B6</td>
-                                    <td class="td3">0.375mg(25%)</td>
-                                </tr>
-                                <tr>
-                                    <td class="td2">비타민C</td>
-                                    <td class="td3">25mg(25%)</td>
-                                </tr>
-                                <tr>
-                                    <td class="td2">비타민E</td>
-                                    <td class="td3">2.5mg(25%)</td>
-                                </tr>
-                                <tr>
-                                    <td class="td2">나이아신</td>
-                                    <td class="td3">3.25mgNE(25%)</td>
-                                </tr>
-                                <tr>
-                                    <td class="td2">엽산</td>
-                                    <td class="td3">62.5mg(25%)</td>
-                                </tr>
+                            <?php
+                                }
+                            ?>
+                            <?php
+                            }
+                            
+                            if(isset($mineral[0][0])) {
+                                foreach($mineral as $m) {
+                            ?>
+                                    <tr>
+                                        <td class="td2"><?php echo $m[0]; ?></td>
+                                        <td class="td3"><?php echo $m[1]; ?></td>
+                                    </tr>
+                            <?php
+                                }
+                            }    
+                            ?>
                             </table>
+                        <?php
+                        }    
+                        ?>
                         </li>
-                        <li class="table">
+                        <li class="table FM">
                             <h4>기능성원료 성분</h4>
+                        <?php
+                        if($product["intake"] == "") {
+                            echo "<p>등록 된 기능성원료 정보가 없습니다.</p>";
+                        } else {
+                        ?>
                             <table>
+                            <?php  
+                            foreach($functionalMaterials as $f) {
+                            ?>
                                 <tr>
-                                    <td class="td1">
-                                        가르시니아캄보지아<br>껍질추출물(HCA)
+                                    <td class="td1" data-name="<?php echo $f[0]; ?>">
+                                        <?php echo $f[0]; ?>
                                         <i class="fas fa-question-circle"></i>
                                     </td>
-                                    <td>750mg</td>
+                                    <td><?php echo (isset($f[1])) ? $f[1] : "-"; ?></td>
                                 </tr>
-                                <tr>
-                                    <td class="td1">
-                                        공액리놀렌산(CLA)
-                                        <i class="fas fa-question-circle"></i>
-                                    </td>
-                                    <td>1,400mg</td>
-                                </tr>
+                            <?php
+                            }    
+                            ?>
                             </table>
+                        <?php
+                        }
+                        ?>
                         </li>
                         <li class="icon">
                             <h4>주의사항</h4>
+                        <?php
+                        if($product["intake"] != "") {    
+                        ?>
                             <ul class="list">
-                                <li class="active inlineBlock">
+                                <li class="inlineBlock <?php echo ($warn["allergie"] != "") ? "active" : ""; ?>">
                                     <div>
                                         <img src="/img/allergy.png" alt="">
                                     </div>
                                     <p>알러지 주의</p>
                                 </li>
-                                <li class="inlineBlock">
+                                <li class="inlineBlock <?php echo ($warn["disease"] != "") ? "active" : ""; ?>">
                                     <div>
                                         <img src="/img/allergy.png" alt="">
                                     </div>
                                     <p>특정 질환 주의</p>
                                 </li>
-                                <li class="inlineBlock active">
+                                <li class="inlineBlock <?php echo ($warn["medicine"] != "") ? "active" : ""; ?>">
                                     <div>
                                         <img src="/img/medicine.png" alt="">
                                     </div>
                                     <p>의약품 섭취 주의</p>
                                 </li>
-                                <li class="inlineBlock">
+                                <li class="inlineBlock <?php echo ($warn["pregnancy"]) ? "active" : ""; ?>">
                                     <div>
                                         <img src="/img/allergy.png" alt="">
                                     </div>
                                     <p>임산부/수유 주의</p>
                                 </li>
-                                <li class="inlineBlock">
+                                <li class="inlineBlock <?php echo ($warn["child"]) ? "active" : ""; ?>">
                                     <div>
                                         <img src="/img/allergy.png" alt="">
                                     </div>
                                     <p>영유아/어린이<br>섭취 주의</p>
                                 </li>
-                                <li class="inlineBlock">
+                                <li class="inlineBlock <?php echo ($warn["eldern"]) ? "active" : ""; ?>">
                                     <div>
                                         <img src="/img/allergy.png" alt="">
                                     </div>
                                     <p>고령자 섭취 주의</p>
                                 </li>
-                                <li class="inlineBlock">
+                                <li class="inlineBlock <?php echo ($warn["sideEffect"] != "") ? "active" : ""; ?>">
                                     <div>
                                         <img src="/img/allergy.png" alt="">
                                     </div>
                                     <p>부작용</p>
                                 </li>
                             </ul>
+                        <?php
+                        } else echo "<p>등록 된 주의사항 정보가 없습니다.</p>";    
+                        ?>
                         </li>
                         <li>
                             <h4>인증</h4>
+                        <?php
+                        if($product["intake"] == "") {
+                            echo "<p>등록 된 인증 정보가 없습니다.</p>";
+                        } else {      
+                        ?>
                             <ul class="list">
-                                <li class="active inlineBlock">
+                            <?php
+                            foreach($cert as $c) {
+                            ?>
+                                <li class="inlineBlock <?php echo (in_array($c["idx"], $certification)) ? "active": ""; ?>">
                                     <div>
-                                        <img src="/img/%EA%B1%B4%EA%B0%95%EA%B8%B0%EB%8A%A5%EC%8B%9D%ED%92%88.png" alt="">
+                                        <img src="/img/certification/<?php echo $c["name"]; ?>.png" alt="<?php echo $c["name"].".png"; ?>" title="<?php echo $c["name"]; ?>">
                                     </div>
                                 </li>
-                                <li class="inlineBlock">
-                                    <div>
-                                        <img src="/img/%EC%9A%B0%EC%88%98%EA%B1%B4%EA%B0%95%EA%B8%B0%EB%8A%A5%EC%8B%9D%ED%92%88%EC%A0%9C%EC%A1%B0%EA%B8%B0%EC%A4%80.png" alt="">
-                                    </div>
-                                </li>
-                                <li class="inlineBlock">
-                                    <div>
-                                        <img src="/img/fda.png" alt="">
-                                    </div>
-                                </li>
+                            <?php
+                            }    
+                            ?>
                             </ul>
+                        <?php
+                        }
+                        ?>
                         </li>
                     </ul>
                 </div>
@@ -648,12 +755,48 @@ include $_SERVER["DOCUMENT_ROOT"]."/include/subHeader.php";
     </div>
 </section>
 
+<!--<div class="dialog displayNone"></div>-->
+
 <script>
 $(function() {
     $("header").addClass("redHeader gradient");
     
     on(".foldable h4", "click", function() {
         $(this).parents(".foldable").toggleClass("fold");
+    });
+    
+    on(".FM .td1", "click", function() {
+        var FMName = $(this).data("name");
+        
+        $.ajax({
+            type: "post",
+            url: "/page/ranking/findFM.php",
+            data: {
+                name: FMName
+            },
+            success: function(result) {
+                result = result.trim();
+                if(result == "") return;
+                $(result).dialog({
+                    modal: true,
+                    draggable: false,
+                    resizable: false,
+                    width: 600,
+                    show: {
+                        effect: "drop",
+                        duration: "slow"
+                    },
+                    hide: {
+                        effect: "drop",
+                        duration: "slow"
+                    }
+                });
+            }
+        });
+    });
+    
+    on(".dialog button", "click", function() {
+        $(this).parents(".dialog").dialog("close");
     });
 });
 </script>

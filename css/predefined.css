@@ -33,7 +33,16 @@ html, body { height: 100%; min-height: 100%;}
 .tagWhite:hover { background: #eb6363; color: white; border-color: #eb6363;}
 .tagGray { width: auto; min-width: 60px; display: inline-block;  font-size: 1.05em; color: #aaa; border: 1px solid #ddd; padding: 8px 15px; border-radius: 100px; margin: 3px; margin-left: 0; cursor: pointer; transition: all .3s; text-align: center;}
 .tagGray.select { color: #eb6363; border-color: #eb6363;}
-.backImage { background-position: center !important; background-size: cover !imoprtant;}
+.backImage { background-position: center !important; background-size: cover !imoprtant;} 
+
+.ui-dialog .ui-dialog-titlebar { display: none !important;}
+.dialog { padding: 30px 20px !important;}
+.dialog h4 { font-family: "SquareEB"; margin-bottom: 20px;}
+.dialog table { border-top: 1.5px solid #ddd; border-bottom: 1.5px solid #ddd;}
+.dialog td { border-bottom: 1px solid #ddd; padding: 10px; line-height: 30px;}
+.dialog tr:last-child td { border: none;}
+.dialog tr td:first-child { background: #efefef; text-align: center; width: 30%;}
+.dialog button { background: none; border: none; cursor: pointer;}
 
 
 
